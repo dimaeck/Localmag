@@ -1,0 +1,4 @@
+Localmag
+========
+
+Localmag wordpress theme
