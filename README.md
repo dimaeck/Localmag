@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 WORDPRESS FOUNDATION
 ===================
 
@@ -41,3 +42,9 @@ Sidebars
 ________
 
 We’ve built in two different sidebars. One for the homepage and one for the other pages. Add widgets to your heart’s content.
+=======
+Localmag
+========
+
+Localmag wordpress theme
+>>>>>>> f6871d0cd513d3befaec4b00060af45dc63b1cd3
