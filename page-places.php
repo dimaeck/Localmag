@@ -10,12 +10,12 @@
         <div id="content">
             <div id="main" class="twelve columns clearfix" role="main">
                 <div class="row">
-                    <div class="twelve columns panel up50">
+                    <div class="twelve columns panel homepage-summary up50">
                         <div class="row">
-                            <div class="six columns offset-by-one">
-                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
+                            <div class="seven columns">
+                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
                             </div>
-                            <div class="two columns mobile-hide">
+                            <div class="offset-by-one one-and-half columns mobile-hide">
                                 <a href="<?php echo site_url('/shop');?>" >
                                     <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/magazine-stack.png" />
                                 </a>
@@ -39,7 +39,7 @@
                     ?>
                 <div class="row">
                     <div class="twelve columns white-panel">
-                        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix row post_summary'); ?> role="article">
+                        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix row post_summary places'); ?> role="article">
                             <div class="twelve columns">
                                 <div class="row">	
                                     <div class="six columns">
@@ -48,6 +48,9 @@
                                             <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
                                             <hr />
                                         </header>
+                                        <section class="post_content clearfix">
+                                            <?php the_excerpt('Read more &raquo;'); ?>
+                                        </section> <!-- end article section -->
                                     </div>
                             <div class="six columns float-right">
                                 <?php if ( has_post_thumbnail() ){ ?>
@@ -66,13 +69,7 @@
                                     </div>
                                 <?php } //end else ?>
                             </div>
-                            <div class="row">
-                                <div class="six columns">
-                                    <section class="post_content clearfix">
-                                        <?php the_excerpt('Read more &raquo;'); ?>
-                                    </section> <!-- end article section -->
-                                </div>
-                            </div>
+
                         </div>
                         <div class="row">
                             <div class="six columns">
@@ -122,7 +119,7 @@
     
 			</div> <!-- end #content -->
         </div>
-        </div>
+    </div>
+    <?php get_footer(); ?>
+</div> <!-- End Container -->
 
-        </div> <!-- End Container -->
-<?php get_footer(); ?>

@@ -2,12 +2,12 @@
             <div id="content" class="row">
 		<div id="main" class="twelve columns clearfix" role="main">
                     <div class="row">
-                        <div class="twelve columns panel up50">
+                        <div class="twelve columns panel single-issue-summary up50">
                             <div class="row">
-                                <div class="four columns">
+                                <div class="five columns">
                                     <?php $attr = array( 'title' => '' ); the_post_thumbnail( 'wpf-featured', $attr ); ?>
                                 </div>
-                                <div class="eight columns issue-summary">
+                                <div class="seven columns issue-summary">
                                     <p>
                                         <?php echo the_content(); ?>
                                     </p>                                           

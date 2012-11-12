@@ -162,7 +162,10 @@ jQuery(document).ready(function ($) {
 //        });
 //
 //    });
-
-    $("#nav").sticky({topSpacing:52});
-
+  $(document).one('scroll', function() {
+    // console.log( $(document).scrollTop());
+    // if ($(document).scrollTop() > 20) {
+      $("#nav").sticky({topSpacing:52});
+    // }
+  });
 });

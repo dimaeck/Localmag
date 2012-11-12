@@ -40,7 +40,8 @@ a {
 
 /* line 16, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/globals.scss */
 a:hover {
-  color: #2795b6;
+  /*color: #2795b6;*/
+  color: #FFF;
 }
 
 /* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/globals.scss */
@@ -1125,6 +1126,7 @@ div.alert-box {
   font-size: 14px;
   color: white;
   background-color: #2ba6cb;
+  background-color: #FFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
   -webkit-border-radius: 3px;
@@ -1759,9 +1761,9 @@ p.vevent abbr {
   width: auto;
   background: #2ba6cb;
   border: 1px solid #1e728c;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  /*-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;*/
+  /*-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;*/
+  /*box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;*/
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -2678,9 +2680,9 @@ ul.tabs-content.contained.vertical > li {
    globals.css */
 /* line 6, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/navbar.scss */
 .nav-bar {
-  height: 40px;
+  /*height: 40px;*/
 /*  background: #4d4d4d;*/
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   padding: 0;
 }
 /* line 8, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/navbar.scss */
@@ -2691,8 +2693,8 @@ ul.tabs-content.contained.vertical > li {
   padding: 0;
   margin: 0;
 /*  border: 1px solid #333333;*/
-  border-right: 2px solid #888;
-  line-height: 38px;
+  border-right: 1px solid #888;
+  /*line-height: 38px;*/
 /*
   -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
   -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
@@ -2738,13 +2740,18 @@ ul.tabs-content.contained.vertical > li {
 }
 /* line 15, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/navbar.scss */
 .nav-bar > li.active:hover {
-  background: #2ba6cb;
+  /*background: #2ba6cb;*/
   cursor: default;
 }
 /* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/navbar.scss */
 .nav-bar > li:hover {
-  background: #333333;
+  /*background: #333333;*/
 }
+
+.nav-bar > li:hover a{
+  color: #fff;
+}
+
 /* line 19, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/navbar.scss */
 .nav-bar > li a {
 /*  color: #e6e6e6;*/
@@ -3963,12 +3970,22 @@ ul.orbit-bullets li.active.has-thumb {
     padding: 20px;
 }
 .twelve.columns.panel.up50{
-    margin-top: -50px;
+    /*margin-top: -52px;*/
 }
 .bold-italic{
     font-weight: bold;
     font-style: italic;
 }
+
+.full-width-image{
+  width: 100%;
+}
+
+.issue a:hover {
+  color: #000;
+}
+/************ Header.php Styles *************/
+
 .siteinfo{
    position: absolute;
    color: #fff;
@@ -4007,6 +4024,19 @@ ul.orbit-bullets li.active.has-thumb {
     font-size: 14px;
 }
 
+
+/********* Places Page ( Aka - Home Page ) ************/
+div.homepage-summary, div.single-issue-summary{
+  border: none;
+}
+.homepage-summary p{
+  margin-left: 0;
+}
+
+.places p{
+  margin-left: 0;
+}
+
 .places-header {
     font-family: "nimbus-sans", sans-serif;
     color: #777;
@@ -4028,11 +4058,11 @@ ul.orbit-bullets li.active.has-thumb {
     color: #fff;
 }
 #nav{
-    position: absolute;
+    position: relative;
     z-index: 1000;
     width: 1000px;
     max-width: 100%;
-    margin-top: -53px;
+    margin-top: -52px;
 }
 #nav-mobile{
     position: absolute;
@@ -4066,7 +4096,8 @@ ul.orbit-bullets li.active.has-thumb {
 
 }
 .nav-bar{
-    margin-top: 5px;
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 
 .nav-bar li {
@@ -4300,9 +4331,9 @@ ul.orbit-bullets li.active.has-thumb {
 }
 
 .magazine-stack{
-    position: absolute;
+/*    position: absolute;
     top: -23px;
-    max-width: 80%;
+    max-width: 80%;*/
 }
 
 #menu-footer-social-links{
@@ -4332,10 +4363,18 @@ ul.orbit-bullets li.active.has-thumb {
 }
 
 /* Break-point for portrait mode iPad */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     
+    /* For the nav bar, override the foundation float: nones; */
+    #nav .column, #nav .columns{
+      float:left;
+    }
+    #nav [class*="column"] + [class*="column"]:last-child {
+      float: right;
+    }
+
     /* for the footer */
-    .offset-by-half{
+    #footer-content .offset-by-half{
         margin-left: 0;
     }
     
@@ -4397,7 +4436,8 @@ ul.orbit-bullets li.active.has-thumb {
 */
 
 .hover-over-article{
-    display: none;
+    display: block;
+    opacity: 0;
     position: absolute;
     top: 0;
     background-color: #000;
@@ -4405,11 +4445,26 @@ ul.orbit-bullets li.active.has-thumb {
     color: #fff;
     width: 100%;
     height: 100%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.hover-over-article h1, 
+.hover-over-article h2, 
+.hover-over-article h3, 
+.hover-over-article h4, 
+.hover-over-article h5, 
+.hover-over-article h6, 
+.hover-over-article p {
+  font-family: "nimbus-sans", sans-serif;
 }
 
 .article-image-link:hover > .hover-over-article{
     color: #fff;
-    display: inline;
+    opacity: 1;
+
 }
 
 .article-image-link p, .article-image-link h5, .article-image-link h6 {

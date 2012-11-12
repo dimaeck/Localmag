@@ -193,11 +193,12 @@
                         $counter++;
                     ?>
                 </div>
-              <br />
-                <?php endwhile; ?>
-                <?php endif; ?>
-            </div><!-- end #main -->
-        </div> <!-- end #content -->
-    </div> <!-- end of outer twelve columns -->
+                <br />
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+                </div><!-- end #main -->
+            </div> <!-- end #content -->
+        </div> <!-- end of outer twelve columns -->
+    <?php get_footer(); ?>
 </div> <!-- End Container -->
-<?php get_footer(); ?>
+

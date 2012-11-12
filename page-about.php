@@ -38,8 +38,7 @@
                 </div> <!-- end #main -->
 
                 <?php //get_sidebar(); // sidebar 1 ?>
-
-        </div> <!-- end #content -->
-    </div>
-</div>
-<?php get_footer(); ?>
+            </div> <!-- end #content -->
+        </div>
+    <?php get_footer(); ?>
+</div> <!-- End Container -->

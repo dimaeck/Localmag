@@ -1,7 +1,7 @@
     <footer role="contentinfo" class="clearfix">
         <div id="footer-content" class="twelve columns">
             <div class="row footer-row">
-                <div class="offset-by-half three columns">
+                <div class="three columns">
                     <h6>&nbsp;</h6>
                     <hr />
                     <p>
@@ -27,7 +27,7 @@
                             endwhile;
                         ?>
                 </div>
-                <div class="one-and-half columns">
+                <div class="two columns">
                     <h6>Follow Us</h6>	
                     <hr />
                     <?php bones_footer_links(); ?>

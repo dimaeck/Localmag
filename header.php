@@ -48,19 +48,16 @@
             <div class="twelve columns">
                 <div class="row header-styles">
                     <div class="twelve columns">
-                        <div class="row">
-                                <?php
-                                    $image_num = rand(1,6);
-                                ?>
-                                <a href="<?php echo site_url();?>">
-                                   <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>"/>
-                                </a>
-<!--                                <div class="siteinfo align-center">
-                                    <h1><a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-                                    <hr />
-                                    <h4 class="subhead"><?php echo get_bloginfo ( 'description' ); ?> </h4>
-                                </div>-->
-                        </div>
+                        <?php if ( ! strpos('iPhone', $_SERVER['HTTP_USER_AGENT']) ){ ?>
+                            <div class="row">
+                                    <?php
+                                        $image_num = rand(1,6);
+                                    ?>
+                                    <a href="<?php echo site_url();?>">
+                                       <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image"/>
+                                    </a>
+                            </div>
+                        <?php } ?>
                         <div class="row">
                             <div id="nav" class="nav-wrapper mobile-hide">
                                 <div class="row">
