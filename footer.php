@@ -1,6 +1,7 @@
-    <footer role="contentinfo" class="clearfix">
+<footer role="contentinfo" class="clearfix">
+    <div class="row">
         <div id="footer-content" class="twelve columns">
-            <div class="row footer-row">
+            <div class="row container footer-row">
                 <div class="three columns">
                     <h6>&nbsp;</h6>
                     <hr />

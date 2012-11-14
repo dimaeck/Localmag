@@ -162,10 +162,10 @@ jQuery(document).ready(function ($) {
 //        });
 //
 //    });
-  $(document).one('scroll', function() {
+  // $(document).on('scroll', function() {
     // console.log( $(document).scrollTop());
-    // if ($(document).scrollTop() > 20) {
+    // if ($(document).scrollTop() > 50) {
       $("#nav").sticky({topSpacing:52});
     // }
-  });
+  // });
 });

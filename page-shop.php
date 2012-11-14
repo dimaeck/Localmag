@@ -5,8 +5,24 @@
  */
 ?>
 <?php get_header(); ?>
-        <div id="content" class="row">
-            <div id="main" class="twelve columns clearfix" role="main">
+            
+            <div class="twelve columns panel homepage-summary up50">
+                <div class="row">
+                    <div class="seven columns">
+                        <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <div class="row container">
+            <?php if( is_user_logged_in() ){ ?>
+
+            <div class="twelve columns clearfix">
                 <?php 
                     $args = array('post_type' => 'issue', 'post_parent' => 0, 'post_per_page' => 10);
                     $loop = new WP_Query( $args );
@@ -40,7 +56,6 @@
                                 <br />
                             </div>
                         </div>
-                        
                         <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix row'); ?> role="article">
                                 <div class="twelve columns">
                                     <div class="row">
@@ -83,35 +98,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                <div class="six columns">
-                                    <div class="row">
-                                        <div class="twelve columns">
-                                            <div class="row">
-                                                <div class="ten columns centered">
-                                                        <div class="featured-image">
-                                                            <a href="<?php the_permalink();?>" />
-                                                                <img src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png"/>
-                                                            </a>
-                                                        </div>
-                                                    <br />
-                                                </div>
-                                            </div>
-<!--                                        <form id="early-subscribe" method="post" action="https://tinyletter.com/localmag">
-                                            <label for="early-subscribe-email"> 
-                                                Available Late Fall, 2012. <br /><br />
-                                                Subscribe here to be first on the list for preorder. 
-                                            </label>
-                                            <div class="email-group">
-                                                <input type="email" id="early-subscribe-email" name="email" value="">
-                                                <br>
-                                                <button class="button" type="submit">Subscribe</button>
-                                            </div>
-                                        </form>-->
-                                                
-                                        </div>                                            
+                                    <div class="six columns">
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <div class="row">
+                                                    <div class="ten columns centered">
+                                                            <div class="featured-image">
+                                                                <a href="<?php the_permalink();?>" />
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png"/>
+                                                                </a>
+                                                            </div>
+                                                        <br />
+                                                    </div>
+                                                </div>      
+                                            </div>                                            
+                                        </div>
                                     </div>
-                                
-                                </div>
                                 </div>
                                 <div class="row">
                                     <div class="twelve columns">
@@ -143,6 +145,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
                             </article> <!-- end article -->            
                         </div>
                 <?php 
@@ -161,21 +166,6 @@
                                     $args = array('classname' => 'widget_wp_paypal_shopping_cart', 'description' => __("Display WP Ultra Simple Paypal Shopping Cart.", "WUSPSC") );
                                     show_wp_paypal_shopping_cart_widget($args); 
                                 ?>
-<!--                                    <div id="slidingTopWrap">
-                                            <div id="slidingTopContent">
-                                                    <div id="basketWrap">
-                                                            <div id="basketTitleWrap">Your Cart</div>
-                                                            <div id="basketItemsWrap">
-                                                                    <ul>
-                                                                            <li>&nbsp;</li>
-                                                                    </ul>
-                                                            </div>
-                                                    </div>
-                                            </div>
-                                            <div id="slidingTopFooter">
-                                                    <div id="slidingTopFooterLeft"><a href="no-js.htm" id="slidingTopTrigger" onclick="return false;">Show Cart</a></div>
-                                            </div>
-                                    </div>                                -->
                         </div>
                 <?php
                     }
@@ -194,11 +184,32 @@
                     ?>
                 </div>
                 <br />
-                    <?php endwhile; ?>
-                    <?php endif; ?>
-                </div><!-- end #main -->
-            </div> <!-- end #content -->
-        </div> <!-- end of outer twelve columns -->
-    <?php get_footer(); ?>
-</div> <!-- End Container -->
+                <?php endwhile; ?>
+                <?php endif; ?>
+
+                <?php }else{ ?>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="row">
+                    <div class="four columns centered">
+                        <form id="early-subscribe" method="post" action="https://tinyletter.com/localmag">
+                            <label for="early-subscribe-email"> 
+                                Available Late Fall, 2012. <br /><br />
+                                Subscribe here to be first on the list for preorder. 
+                            </label>
+                            <div class="email-group">
+                                <input type="email" id="early-subscribe-email" name="email" value="">
+                                <br>
+                                <button class="button" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            <?php } ?>
+    </div>
+</div>
+<?php get_footer(); ?>
 

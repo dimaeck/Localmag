@@ -43,51 +43,54 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	</head>
 	
-    <body <?php body_class(); ?>>
-        <div class="row container">
-            <div class="twelve columns">
-                <div class="row header-styles">
-                    <div class="twelve columns">
-                        <?php if ( ! strpos('iPhone', $_SERVER['HTTP_USER_AGENT']) ){ ?>
-                            <div class="row">
-                                    <?php
-                                        $image_num = rand(1,6);
-                                    ?>
-                                    <a href="<?php echo site_url();?>">
-                                       <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image"/>
-                                    </a>
-                            </div>
-                        <?php } ?>
-                        <div class="row">
-                            <div id="nav" class="nav-wrapper mobile-hide">
+<body <?php body_class(); ?>>
+    <div class="row full-width-header-here header-fill">
+        <div class="twelve columns">
+            <div class="row container">
+                <div class="twelve columns">
+                    <div class="row">
+                        <div class="twelve columns">
+                            <?php if ( ! strpos('iPhone', $_SERVER['HTTP_USER_AGENT']) ){ ?>
                                 <div class="row">
-                                    <div class="offset-by-one three columns">
-                                        <h5> 
-                                            <a href="<?php echo get_bloginfo('url'); ?>"> Local Magazine </a>
-                                        </h5>
-                                    </div>
-                                    <div class="eight columns">
-                                                <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>                                                
-                                    </div>
+                                        <?php
+                                            $image_num = rand(1,6);
+                                        ?>
+                                        <a href="<?php echo site_url();?>">
+                                           <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image"/>
+                                        </a>
                                 </div>
-                            </div>
-<!--                            <div id="nav-mobile" class="nav-wrapper-mobile">
-                                <div class="row">
-                                    <div class="mobile-relative mobile-four">
-                                        <div class="show-for-small menu-action">
-                                                    <a href="#sidebar" id="mobile-nav-button" class="sidebar-button small secondary button">
-                                                                <svg xml:space="preserve" enable-background="new 0 0 48 48" viewBox="0 0 48 48" height="18px" width="18px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
-                                                                        <line y2="8.907" x2="48" y1="8.907" x1="0" stroke-miterlimit="10" stroke-width="8" stroke="#C3C3C3" fill="none"/>
-                                                                        <line y2="24.173" x2="48" y1="24.173" x1="0" stroke-miterlimit="10" stroke-width="8" stroke="#C3C3C3" fill="none"/>
-                                                                        <line y2="39.439" x2="48" y1="39.439" x1="0" stroke-miterlimit="10" stroke-width="8" stroke="#C3C3C3" fill="none"/>
-                                                                        Menu
-                                                                </svg>
-                                                    </a>
+                            <?php } ?>
+                            <div class="row normal-header-here">
+                                <div id="nav" class="nav-wrapper header-styles mobile-hide">
+                                    <div class="row">
+                                        <div class="offset-by-half three columns">
+                                            <h5> 
+                                                <a href="<?php echo get_bloginfo('url'); ?>"> Local Magazine </a>
+                                            </h5>
                                         </div>
-                                        <?php bones_mobile_nav(); ?>
+                                        <div class="eight columns">
+                                                    <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>                                                
+                                        </div>
                                     </div>
                                 </div>
-                            </div>-->
+    <!--                            <div id="nav-mobile" class="nav-wrapper-mobile">
+                                    <div class="row">
+                                        <div class="mobile-relative mobile-four">
+                                            <div class="show-for-small menu-action">
+                                                        <a href="#sidebar" id="mobile-nav-button" class="sidebar-button small secondary button">
+                                                                    <svg xml:space="preserve" enable-background="new 0 0 48 48" viewBox="0 0 48 48" height="18px" width="18px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+                                                                            <line y2="8.907" x2="48" y1="8.907" x1="0" stroke-miterlimit="10" stroke-width="8" stroke="#C3C3C3" fill="none"/>
+                                                                            <line y2="24.173" x2="48" y1="24.173" x1="0" stroke-miterlimit="10" stroke-width="8" stroke="#C3C3C3" fill="none"/>
+                                                                            <line y2="39.439" x2="48" y1="39.439" x1="0" stroke-miterlimit="10" stroke-width="8" stroke="#C3C3C3" fill="none"/>
+                                                                            Menu
+                                                                    </svg>
+                                                        </a>
+                                            </div>
+                                            <?php bones_mobile_nav(); ?>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
                         </div>
                     </div>
-                </div>
+

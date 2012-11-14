@@ -30,14 +30,25 @@
                 var s = sticked[i],
                     elementTop = s.stickyWrapper.offset().top,
                     etse = elementTop - s.topSpacing - extra;
+                    if(etse < 0){
+                        etse = 0;
+                    }
+                // console.log("scrollTop is " + scrollTop);
+                // console.log("etse is " + etse);
                 if (scrollTop <= etse) {
                     if (s.currentTop !== null) {
+                        // s.stickyElement.parent().appendTo('.normal-header-here');
                         s.stickyElement
                             .css('position', '')
                             .css('top', '')
+                            .css('left', '')
+                            .css('width', '')
                             .removeClass(s.className);
+
                         s.stickyElement.parent().removeClass(s.className);
+                        
                         s.currentTop = null;
+                        $(".homepage-summary").css('margin-top', '');
                     }
                 }
                 else {
@@ -49,12 +60,18 @@
                         newTop = s.topSpacing;
                     }
                     if (s.currentTop != newTop) {
+                        // s.stickyElement.parent().clone().prependTo(document.body);
+                        // $(document.body).prepend(s.stickyElement.parent());
                         s.stickyElement
                             .css('position', 'fixed')
                             .css('top', newTop)
+                            .css('left', '0px')
                             .addClass(s.className);
                         s.stickyElement.parent().addClass(s.className);
+                        // s.stickyElement.width($(window).width());
+                        s.stickyElement.animate({ width:$window.width() }, 600);
                         s.currentTop = newTop;
+                        $(".homepage-summary").css('margin-top', '-52px');
                     }
                 }
             }
