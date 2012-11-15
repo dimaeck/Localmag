@@ -65,11 +65,10 @@
                         s.stickyElement
                             .css('position', 'fixed')
                             .css('top', newTop)
-                            .css('left', '0px')
+                            .css('left', '100px')
                             .addClass(s.className);
                         s.stickyElement.parent().addClass(s.className);
-                        // s.stickyElement.width($(window).width());
-                        s.stickyElement.animate({ width:$window.width() }, 600);
+                        s.stickyElement.animate({ width:$window.width(), left:0 }, 600);
                         s.currentTop = newTop;
                         $(".homepage-summary").css('margin-top', '-52px');
                     }

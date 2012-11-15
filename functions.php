@@ -577,7 +577,41 @@ add_action('save_post', 'save_homepage_meta');
     function add_custom_metabox(){
         add_meta_box( 'custom-metabox', __( 'Issues Meta' ), 'issues_metabox', 'issue', 'normal', 'high' );
     }
+
+    add_action( 'admin-init', 'add_custom_metabox' );
+    add_action( 'save_post', 'save_issues_metabox' );
+
+/* Add a Sponsors URL Field to the Custom Post Type "Sponsor" */
+    function sponsor_metabox(){
+        global $post;
+        $sponsor_url = get_post_meta( $post->ID, 'sponsor_url', true);
+    ?>
+        <p>
+            <label for="sponsor_url">Sponsors URL<br />
+                <textarea id="sponsor_url" name="sponsor_url" cols="45" rows="4">
+                    <?php if( $sponsor_url ) { echo $sponsor_url; } ?>
+                </textarea>
+            </label>
+        </p>
+ <?php
+    }
     
+    function save_sponsor_metabox( ) {
+        global $post;
+
+        if( $_POST ) {
+            update_post_meta( $post->ID, 'sponsor_url', $_POST['sponsor_url'] );
+        }
+    }
+
+    function add_sponsor_custom_metabox(){
+        add_meta_box( 'custom-sponsor-metabox', __( 'Sponsors Meta' ), 'sponsor_metabox', 'sponsor', 'normal', 'high' );
+    }
+
+    add_action( 'admin-init', 'add_sponsor_custom_metabox' );
+    add_action( 'save_post', 'save_sponsor_metabox' );
+
+/***********************/    
     function get_featured_image_description() {
         global $post;
         $img_description = get_post_meta( $post->ID, 'featured_description', true );
@@ -592,8 +626,7 @@ add_action('save_post', 'save_homepage_meta');
     function get_shop_excerpt() {
         return substr( get_the_excerpt(), 0, strrpos( substr( get_the_excerpt(), 0, 160), ' ' ) );
     }
-add_action( 'admin-init', 'add_custom_metabox' );
-add_action( 'save_post', 'save_issues_metabox' );
+
 
     function is_subpage() {
         global $post;

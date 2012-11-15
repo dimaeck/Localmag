@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
                 <div class="row">
-                    <div class="twelve columns panel homepage-summary up50">
+                    <div class="twelve columns panel homepage-summary">
                         <div class="row">
                             <div class="seven columns">
                                 <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
@@ -17,7 +17,7 @@
                                 </a>
                             </div>
                             <div class="two columns end mini-text-wrapper">
-                                <h6> <strong> Issue No. 1 </strong> </h6>
+                                <h5> <strong> Issue No. 1 </strong> </h5>
                                 <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
                             </div>
                         </div>

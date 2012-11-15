@@ -1,8 +1,40 @@
+<?php
+/*
+ * Template name: First Place
+ */
+
+?>
+
 <?php get_header(); ?>
+
                 <div class="row">
-            		<div class="twelve columns clearfix">
+                    <div class="twelve columns panel homepage-summary">
                         <div class="row">
-                            <div class="twelve columns panel single-issue-summary up50">
+                            <div class="seven columns">
+                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
+                            </div>
+                            <div class="offset-by-one one-and-half columns mobile-hide">
+                                <a href="<?php echo site_url('/shop');?>" >
+                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/magazine-stack.png" />
+                                </a>
+                            </div>
+                            <div class="two columns end mini-text-wrapper">
+                                <h5> <strong> Issue No. 1 </strong> </h5>
+                                <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<?php 
+    /* Do something special since this is the first issue */
+    global $post;
+    $mypostid = 6;
+    $post = get_post($mypostid, OBJECT);
+?>
+                <!-- <div class="row">
+                    <div class="twelve columns clearfix">
+                        <div class="row">
+                            <div class="twelve columns panel single-issue-summary">
                                 <div class="row">
                                     <div class="five columns">
                                         <?php $attr = array( 'title' => '' ); the_post_thumbnail( 'wpf-featured', $attr ); ?>
@@ -10,13 +42,13 @@
                                     <div class="seven columns issue-summary">
                                         <p>
                                             <?php echo the_content(); ?>
-                                        </p>                                           
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -27,7 +59,7 @@
             <div class="twelve columns">
                 <div class="row">
                     <div class="twelve columns">
-                        <a href="<?php the_permalink();?>">
+                        <a href="<?php the_permalink();?>" class="no-hover">
                             <h4>Stories - <?php echo $post->post_title ?></h4>
                         </a>
                         <hr /> 
@@ -37,7 +69,7 @@
                     <div class="twelve columns">
                         <ul class="block-grid two-up">
                             <?php 
-                                $args = array('post_type' => 'issue', 'post_parent' => $post->ID, 'post_per_page' => 10);
+                                $args = array('post_type' => 'issue', 'post_parent' => 6, 'post_per_page' => 10);
                                 $loop = new WP_Query( $args );
                                 if ($loop->have_posts()){
                                     while ($loop->have_posts()){
@@ -66,7 +98,7 @@
                                     </a>
                                 </div>
                             </li>
-                			<?php 
+                            <?php 
                                     } //Endwhile
                                 } //EndIf
                             ?>

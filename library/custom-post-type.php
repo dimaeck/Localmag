@@ -31,7 +31,7 @@ function issue_post_type() {
 			'has_archive' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes', 'sticky', 'post-formats', 'gallery', 'video', 'audio'),
-                        'register_meta_box_cb' => 'add_custom_metabox'
+            'register_meta_box_cb' => 'add_custom_metabox'
 	 	) /* end of options */
 	); /* end of register post type */
 	
@@ -71,7 +71,7 @@ function sponsor_post_type() {
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes', 'sticky', 'post-formats', 'gallery', 'video', 'audio'),
-                        'register_meta_box_cb' => 'add_custom_metabox'
+            'register_meta_box_cb' => 'add_sponsor_custom_metabox'
 	 	) /* end of options */
 	); /* end of register post type */
 	
