@@ -10,10 +10,7 @@
                         <div class="row">
                             <div class="twelve columns panel single-issue-summary up50">
                                 <div class="row">
-                                    <div class="five columns">
-                                        <?php $attr = array( 'title' => '' ); the_post_thumbnail( 'wpf-featured', $attr ); ?>
-                                    </div>
-                                    <div class="seven columns issue-summary">
+                                    <div class="eight columns issue-summary">
                                         <p>
                                             <?php echo the_content(); ?>
                                         </p>                                           

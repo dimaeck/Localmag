@@ -3989,6 +3989,27 @@ ul.orbit-bullets li.active.has-thumb {
 .no-hover:hover{
   color:#000;
 }
+
+ul.one-up{
+  list-style: none;
+}
+
+a.larger-tiles{
+  background-image: url("../images/plus-8.png");
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+  width: 8px;
+  float: left;
+}
+
+a.smaller-tiles{
+  background-image: url("../images/minus-8.png");
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+  width: 8px;
+  float: left;
+}
+
 /************ Header.php Styles *************/
 
 .siteinfo{
@@ -4147,6 +4168,8 @@ div.homepage-summary, div.single-issue-summary{
 
 .featured-image img{
     border-style: none; /* This is for IE only */
+    vertical-align: baseline;
+    vertical-align: bottom;
 }
 
 .shop-image{
@@ -4188,7 +4211,7 @@ div.homepage-summary, div.single-issue-summary{
 
 .featured-image-description{
     position:absolute; 
-    bottom:5px; 
+    bottom:0px; 
     width:100%;
     max-width: 100%;
     font-family: 'tahoma';
@@ -4465,6 +4488,7 @@ article.issue h2{
 }
 /* -----------------------------------------
    single-article.php - Displays featured image of all the Articles under the parent Issue                    
+   page-first-places.php
 */
 
 .hover-over-article{
@@ -4499,10 +4523,30 @@ article.issue h2{
 
 }
 
+.featured-image:hover > .hover-over-article{
+    color: #fff;
+    opacity: 1;
+
+}
+
 .article-image-link p, .article-image-link h5, .article-image-link h6 {
   margin-bottom: 0;
   margin-left: 17px;
   margin-right: 17px;
+}
+
+.block-grid-size{
+  margin-right: 15px;
+  float: right;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  list-style: none;
+}
+
+.block-grid-size li{
+  float: left;
+  margin-left: 10px;
 }
 
 /* -----------------------------------------

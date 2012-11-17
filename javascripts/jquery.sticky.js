@@ -60,12 +60,13 @@
                         newTop = s.topSpacing;
                     }
                     if (s.currentTop != newTop) {
-                        // s.stickyElement.parent().clone().prependTo(document.body);
-                        // $(document.body).prepend(s.stickyElement.parent());
+                        leftAnimateStart = $window.width() * 0.2 ;
+                        rightAnimateStart = $window.width() * 0.7 ;
                         s.stickyElement
                             .css('position', 'fixed')
                             .css('top', newTop)
-                            .css('left', '100px')
+                            .css('left', leftAnimateStart)
+                            .css('width', rightAnimateStart)
                             .addClass(s.className);
                         s.stickyElement.parent().addClass(s.className);
                         s.stickyElement.animate({ width:$window.width(), left:0 }, 600);

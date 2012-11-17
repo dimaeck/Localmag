@@ -3,7 +3,7 @@
 */
 
 // Get Bones Core Up & Running!
-require_once('library/bones.php');            // core functions (don't remove)
+// require_once('library/bones.php');            // core functions (don't remove)
 require_once('library/plugins.php');          // plugins & extra functions (optional)
 require_once('library/custom-post-type.php'); // custom post type example
 
@@ -58,16 +58,12 @@ function bones_register_sidebars() {
 
 function theme_styles()  
 { 
-    // Bring in Open Sans from Google fonts
-    wp_register_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300,800');
     // This is the compiled css file from SCSS
     wp_register_style( 'foundation-app', get_template_directory_uri() . '/stylesheets/app.css', array(), '3.0', 'all' );
-    
-    wp_register_style( 'lightbox', get_template_directory_uri() . '/stylesheets/lightbox.css', array(), '3.0', 'all' );
-    
-    wp_enqueue_style( 'lightbox' );
-    wp_enqueue_style( 'open-sans' );
     wp_enqueue_style( 'foundation-app' );
+    // wp_register_style( 'lightbox', get_template_directory_uri() . '/stylesheets/lightbox.css', array(), '3.0', 'all' );
+    // wp_enqueue_style( 'lightbox' );
+    
 }
 
 add_action('wp_enqueue_scripts', 'theme_styles');
@@ -76,13 +72,13 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 /* pull jquery from google's CDN. If it's not available, grab the local copy. Code from wp.tutsplus.com :-) */
 
-$url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'; // the URL to check against  
+$url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'; // the URL to check against  
 $test_url = @fopen($url,'r'); // test parameters  
 if( $test_url !== false ) { // test if the URL exists  
 
     function load_external_jQuery() { // load external file  
         wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
-        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'); // register the external file  
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'); // register the external file  
         wp_enqueue_script('jquery'); // enqueue the external file  
     }  
 
@@ -91,7 +87,7 @@ if( $test_url !== false ) { // test if the URL exists
 
     function load_local_jQuery() {  
         wp_deregister_script('jquery'); // initiate the function  
-        wp_register_script('jquery', bloginfo('template_url').'/javascripts/jquery.min.js', __FILE__, false, '1.7.2', true); // register the local file  
+        wp_register_script('jquery', bloginfo('template_url').'/javascripts/jquery.min.js', __FILE__, false, '1.8.3', true); // register the local file  
         wp_enqueue_script('jquery'); // enqueue the local file  
     }  
 
@@ -107,23 +103,23 @@ function modernize_it(){
 add_action( 'wp_enqueue_scripts', 'modernize_it' );
 
 function foundation_js(){
-    wp_register_script( 'foundation-reveal', get_template_directory_uri() . '/javascripts/foundation/jquery.reveal.js' ); 
-    wp_enqueue_script( 'foundation-reveal', 'jQuery', '1.1', true );
+    // wp_register_script( 'foundation-reveal', get_template_directory_uri() . '/javascripts/foundation/jquery.reveal.js' ); 
+    // wp_enqueue_script( 'foundation-reveal', 'jQuery', '1.1', true );
     wp_register_script( 'foundation-orbit', get_template_directory_uri() . '/javascripts/foundation/jquery.orbit-1.4.0.js' ); 
     wp_enqueue_script( 'foundation-orbit', 'jQuery', '1.4.0', true );
-    wp_register_script( 'foundation-custom-forms', get_template_directory_uri() . '/javascripts/foundation/jquery.customforms.js' ); 
-    wp_enqueue_script( 'foundation-custom-forms', 'jQuery', '1.0', true );
-    wp_register_script( 'foundation-placeholder', get_template_directory_uri() . '/javascripts/foundation/jquery.placeholder.min.js' ); 
-    wp_enqueue_script( 'foundation-placeholder', 'jQuery', '2.0.7', true );
-    wp_register_script( 'foundation-tooltips', get_template_directory_uri() . '/javascripts/foundation/jquery.tooltips.js' ); 
-    wp_enqueue_script( 'foundation-tooltips', 'jQuery', '2.0.1', true );
+    // wp_register_script( 'foundation-custom-forms', get_template_directory_uri() . '/javascripts/foundation/jquery.customforms.js' ); 
+    // wp_enqueue_script( 'foundation-custom-forms', 'jQuery', '1.0', true );
+    // wp_register_script( 'foundation-placeholder', get_template_directory_uri() . '/javascripts/foundation/jquery.placeholder.min.js' ); 
+    // wp_enqueue_script( 'foundation-placeholder', 'jQuery', '2.0.7', true );
+    // wp_register_script( 'foundation-tooltips', get_template_directory_uri() . '/javascripts/foundation/jquery.tooltips.js' ); 
+    // wp_enqueue_script( 'foundation-tooltips', 'jQuery', '2.0.1', true );
     wp_register_script( 'foundation-app', get_template_directory_uri() . '/javascripts/app.js' ); 
     wp_enqueue_script( 'foundation-app', 'jQuery', '1.0', true, true );
-    wp_register_script( 'foundation-off-canvas', get_template_directory_uri() . '/javascripts/foundation/off-canvas.js' ); 
-    wp_enqueue_script( 'foundation-off-canvas', 'jQuery', '1.0', true );
+    // wp_register_script( 'foundation-off-canvas', get_template_directory_uri() . '/javascripts/foundation/off-canvas.js' );
+    // wp_enqueue_script( 'foundation-off-canvas', 'jQuery', '1.0', true );
     
-    wp_register_script( 'lightbox', get_template_directory_uri() . '/javascripts/lightbox.js' ); 
-    wp_enqueue_script( 'lightbox', 'jQuery', '1.0', true );
+    // wp_register_script( 'lightbox', get_template_directory_uri() . '/javascripts/lightbox.js' ); 
+    // wp_enqueue_script( 'lightbox', 'jQuery', '1.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'foundation_js');
@@ -131,17 +127,13 @@ add_action('wp_enqueue_scripts', 'foundation_js');
 function wp_foundation_js(){
     wp_register_script( 'wp-foundation-js', get_template_directory_uri() . '/library/js/scripts.js', 'jQuery', '1.0', true);
     wp_enqueue_script( 'wp-foundation-js' );
+    wp_register_script( 'jquery-sticky-js', get_template_directory_uri() . '/javascripts/jquery.sticky.js', 'jQuery','1.0', true);
+    wp_enqueue_script( 'jquery-sticky-js', 'jQuery', '1.0', true);
+    wp_register_script( 'jquery-ui-effects-core.min', get_template_directory_uri() . '/javascripts/jquery-ui-effects-core.min.js', 'jQuery','1.0', true);
+    wp_enqueue_script( 'jquery-ui-effects-core.min', 'jQuery', '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
-
-
-function localmag_js(){
-    wp_register_script( 'jquery-sticky-js', get_template_directory_uri() . '/javascripts/jquery.sticky.js', 'jQuery','1.0', true);
-    wp_enqueue_script( 'jquery-sticky-js', 'jQuery', '1.0', true);
-}
-
-add_action('wp_enqueue_scripts', 'localmag_js');
 
 //function typekit_js(){
 //    wp_register_script ( 'typekit-js', get_template_directory_uri() . '//use.typekit.net/ics1mgx.js', 'jQuery', '1.0', true);
@@ -150,55 +142,31 @@ add_action('wp_enqueue_scripts', 'localmag_js');
 //
 //add_action('wp_enqueue_scripts', 'typekit_js');
 
-/************* COMMENT LAYOUT *********************/
-		
-// Comment Layout
-function bones_comments($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?>>
-		<article id="comment-<?php comment_ID(); ?>" class="panel clearfix">
-			<div class="comment-author vcard row clearfix">
-                <div class="twelve columns">
-                    <div class="
-                        <?php
-                        $authID = get_the_author_meta('ID');
-                                                    
-                        if($authID == $comment->user_id)
-                            echo "panel callout";
-                        else
-                            echo "panel";
-                        ?>
-                    ">
-                        <div class="row">
-            				<div class="avatar two columns">
-            					<?php echo get_avatar($comment,$size='75',$default='<path_to_url>' ); ?>
-            				</div>
-            				<div class="ten columns">
-            					<?php printf(__('<h4 class="span8">%s</h4>'), get_comment_author_link()) ?>
-            					<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
-            					
-            					<?php edit_comment_link(__('Edit'),'<span class="edit-comment">', '</span>'); ?>
-                                
-                                <?php if ($comment->comment_approved == '0') : ?>
-                   					<div class="alert-box success">
-                      					<?php _e('Your comment is awaiting moderation.') ?>
-                      				</div>
-            					<?php endif; ?>
-                                
-                                <?php comment_text() ?>
-                                
-                                <!-- removing reply link on each comment since we're not nesting them -->
-            					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-		</article>
-    <!-- </li> is added by wordpress automatically -->
-<?php
-} // don't remove this bracket!
+function localmag_main_nav() {
+    wp_nav_menu( 
+        array( 
+            'menu' => 'main_nav', /* menu name */
+            'menu_class' => 'top-nav nav-bar',
+            'theme_location' => 'main_nav', /* where in the theme it's assigned */
+            'container' => 'false', /* container tag */
+            'depth' => '1'
+        )      
+    );
+}
 
+function localmag_footer_links() { 
+    wp_nav_menu(
+        array(
+            'menu' => 'footer_links', /* menu name */
+            'menu_class' => '',
+            'theme_location' => 'footer_links', /* where in the theme it's assigned */
+            'container_class' => 'footer-links clearfix' /* container class */
+        )
+    );
+}
+
+/************* COMMENT LAYOUT *********************/
+	
 // Add grid classes to comments
 function add_class_comments($classes){
     array_push($classes, "twelve", "columns");
@@ -240,48 +208,6 @@ function custom_password_form() {
 	';
 	return $o;
 }
-
-/*********** update standard wp tag cloud widget so it looks better ************/
-
-// filter tag clould output so that it can be styled by CSS
-function add_tag_class( $taglinks ) {
-    $tags = explode('</a>', $taglinks);
-    $regex = "#(.*tag-link[-])(.*)(' title.*)#e";
-        foreach( $tags as $tag ) {
-            $tagn[] = preg_replace($regex, "('$1$2 label radius tag-'.get_tag($2)->slug.'$3')", $tag );
-        }
-    $taglinks = implode('</a>', $tagn);
-    return $taglinks;
-}
-
-add_action('wp_tag_cloud', 'add_tag_class');
-
-add_filter( 'widget_tag_cloud_args', 'my_widget_tag_cloud_args' );
-
-function my_widget_tag_cloud_args( $args ) {
-	$args['number'] = 20; // show less tags
-	$args['largest'] = 9.75; // make largest and smallest the same - i don't like the varying font-size look
-	$args['smallest'] = 9.75;
-	$args['unit'] = 'px';
-	return $args;
-}
-
-add_filter('wp_tag_cloud','wp_tag_cloud_filter', 10, 2);
-
-function wp_tag_cloud_filter($return, $args)
-{
-  return '<div id="tag-cloud"><p>'.$return.'</p></div>';
-}
-
-function add_class_the_tags($html){
-    $postid = get_the_ID();
-    $html = str_replace('<a','<a class="label success radius"',$html);
-    return $html;
-}
-add_filter('the_tags','add_class_the_tags',10,1);
-
-// Enable shortcodes in widgets
-add_filter('widget_text', 'do_shortcode');
 
 // Disable jump in 'read more' link
 function remove_more_jump_link($link) {
@@ -344,117 +270,53 @@ function strip_empty_classes($menu) {
 }
 add_filter ('wp_nav_menu','strip_empty_classes');
 
-
-// add the 'has-flyout' class to any li's that have children and add the arrows to li's with children
-
-class description_walker extends Walker_Nav_Menu
-{
-      function start_el(&$output, $item, $depth, $args)
-      {
-            global $wp_query;
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+// // Walker class to customize footer links
+// class footer_links_walker extends Walker_Nav_Menu
+// {
+//       function start_el(&$output, $item, $depth, $args)
+//       {
+//             global $wp_query;
+//             $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
             
-            $class_names = $value = '';
+//             $class_names = $value = '';
             
-            // If the item has children, add the dropdown class for foundation
-            if ( $args->has_children ) {
-                $class_names = "has-flyout ";
-            }
+//             $classes = empty( $item->classes ) ? array() : (array) $item->classes;
             
-            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-            
-            $class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-            $class_names = ' class="'. esc_attr( $class_names ) . '"';
+//             $class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+//             $class_names = ' class="'. esc_attr( $class_names ) . '"';
            
-            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+//             $output .= $indent . '<li ' . $value . $class_names .'>';
 
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-            // if the item has children add these two attributes to the anchor tag
-            // if ( $args->has_children ) {
-            //     $attributes .= 'class="dropdown-toggle" data-toggle="dropdown"';
-            // }
+//             $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+//             $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+//             $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+//             $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 
-            $item_output = $args->before;
-            $item_output .= '<a'. $attributes .'>';
-            $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
-            $item_output .= $args->link_after;
-            // if the item has children add the caret just before closing the anchor tag
-            if ( $args->has_children ) {
-                $item_output .= '</a><a href="#" class="flyout-toggle"><span> </span></a>';
-            }
-            else{
-                $item_output .= '</a>';
-            }
-            $item_output .= $args->after;
+//             $item_output = $args->before;
+//             $item_output .= '<a'. $attributes .'>';
+//             $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
+//             $item_output .= $args->link_after;
+            
+//             $item_output .= '</a>';
+//             $item_output .= $args->after;
 
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-            }
+//             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+//             }
             
-        function start_lvl(&$output, $depth) {
-            $indent = str_repeat("\t", $depth);
-            $output .= "\n$indent<ul class=\"flyout\">\n";
-        }
+//         function start_lvl(&$output, $depth) {
+//             $indent = str_repeat("\t", $depth);
+//             $output .= "\n$indent<ul class=\"flyout\">\n";
+//         }
             
-        function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output )
-            {
-                $id_field = $this->db_fields['id'];
-                if ( is_object( $args[0] ) ) {
-                    $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
-                }
-                return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-            }       
-}
-
-// Walker class to customize footer links
-class footer_links_walker extends Walker_Nav_Menu
-{
-      function start_el(&$output, $item, $depth, $args)
-      {
-            global $wp_query;
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-            
-            $class_names = $value = '';
-            
-            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-            
-            $class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-            $class_names = ' class="'. esc_attr( $class_names ) . '"';
-           
-            $output .= $indent . '<li ' . $value . $class_names .'>';
-
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-
-            $item_output = $args->before;
-            $item_output .= '<a'. $attributes .'>';
-            $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
-            $item_output .= $args->link_after;
-            
-            $item_output .= '</a>';
-            $item_output .= $args->after;
-
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-            }
-            
-        function start_lvl(&$output, $depth) {
-            $indent = str_repeat("\t", $depth);
-            $output .= "\n$indent<ul class=\"flyout\">\n";
-        }
-            
-        function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output )
-            {
-                $id_field = $this->db_fields['id'];
-                if ( is_object( $args[0] ) ) {
-                    $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
-                }
-                return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-            }       
-}
+//         function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output )
+//             {
+//                 $id_field = $this->db_fields['id'];
+//                 if ( is_object( $args[0] ) ) {
+//                     $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
+//                 }
+//                 return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+//             }       
+// }
 
 
 // Add the Meta Box to the homepage template
