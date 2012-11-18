@@ -874,6 +874,11 @@ that IE7/8 do not support :nth-child.
   float: left;
 }
 
+.block-grid.one-up > li {
+  width: 83.33%;
+  padding: 0 15px 15px;
+}
+
 /* line 112, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/grid.scss */
 .block-grid.two-up {
   margin: 0 -15px;
@@ -4505,6 +4510,10 @@ article.issue h2{
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
+}
+
+.hover-over-article a{
+  color: #fff;
 }
 
 .hover-over-article h1, 

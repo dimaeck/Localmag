@@ -90,10 +90,8 @@ jQuery(document).ready(function ($) {
     }else if($adjustablegrid.hasClass('two-up')){
       
       $adjustablegrid.removeClass("two-up three-up four-up");
-      $adjustablegrid.addClass("one-up");
       $('ul.adjustable-grid > li').animate({width:'83.33%'}, 600);
-      $adjustablegrid.addClass('ten columns centered');
-      $adjustablegrid.removeClass("block-grid");
+      $adjustablegrid.addClass('one-up ten columns centered');
 
     }else if($adjustablegrid.hasClass('three-up')){
       $adjustablegrid.removeClass("two-up three-up four-up");
@@ -109,7 +107,8 @@ jQuery(document).ready(function ($) {
    });
 
   $('.featured-image-description img.article-icon').click(function(){
-    alert("Clicked it");
+    // alert("Clicked it");
+    $('.hover-over-article').animate({opacity:'1'});
   });
 
   $("#nav").sticky({topSpacing:52});
