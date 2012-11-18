@@ -42,7 +42,8 @@ jQuery(document).ready(function ($) {
    };
    $.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=readlocalmag&count=4&callback=?', function(data){
      $.each(data, function(index, item){
-       $('#twitter-feed').append('<div class="tweet"><p>' + item.text.linkify() + '</p><p><span class="twitter-time"><strong>' + relative_time(item.created_at) + '</strong></span></p></div>');
+       $('#twitter-feed, #sidebar-twitter').append('<div class="tweet"><p>' + item.text.linkify() + '</p><p><span class="twitter-time"><strong>' + relative_time(item.created_at) + '</strong></span></p></div>');
+
      });
    });
 
@@ -112,4 +113,7 @@ jQuery(document).ready(function ($) {
   });
 
   $("#nav").sticky({topSpacing:52});
+
+  // $('.stMainServices').css('height', '22px');
+
 });

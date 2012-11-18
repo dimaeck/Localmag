@@ -27,33 +27,6 @@ add_image_size( 'localmag-issue', 460, 300, false );
 add_image_size ( 'wpf-home-featured', 970, 364, true );
 add_image_size( 'bones-thumb-600', 639, 300, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-
-
-/************* ACTIVE SIDEBARS ********************/
-
-// Sidebars & Widgetizes Areas
-function bones_register_sidebars() {
-    register_sidebar(array(
-    	'id' => 'sidebar1',
-    	'name' => 'Main Sidebar',
-    	'description' => 'Used on every page BUT the homepage page template.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
-    register_sidebar(array(
-    	'id' => 'sidebar2',
-    	'name' => 'Homepage Sidebar',
-    	'description' => 'Used only on the homepage page template.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-}
-
 /************* ENQUEUE CSS AND JS *****************/
 
 function theme_styles()  
@@ -165,6 +138,28 @@ function localmag_footer_links() {
     );
 }
 
+function localmag_sidebar_links() {
+    wp_nav_menu(
+        array(
+            'menu' => 'sidebar_links', /* menu name */
+            'menu_class' => 'block-grid two-up sidebar',
+            'theme_location' => 'sidebar_links', /* where in the theme it's assigned */
+            'container_class' => 'footer-links sidebar-links clearfix' /* container class */
+        )
+    );   
+}
+
+function localmag_register_menus(){
+    register_nav_menus(
+        array(
+            'main_nav' => __('Main Menu'),
+            'footer_links' => __('Footer links'),
+            'sidebar_links' => __('Sidebar links')
+            )
+        );
+}
+
+add_action( 'init', 'localmag_register_menus');
 /************* COMMENT LAYOUT *********************/
 	
 // Add grid classes to comments

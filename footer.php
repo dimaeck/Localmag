@@ -84,5 +84,7 @@
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
          </script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "a42ff0ff-f29f-4adc-aaab-79e02702726f"});</script>
     </body>
 </html>

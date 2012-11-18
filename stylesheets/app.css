@@ -3995,6 +3995,10 @@ ul.orbit-bullets li.active.has-thumb {
   color:#000;
 }
 
+.no-margin{
+  margin: 0;
+}
+
 ul.one-up{
   list-style: none;
 }
@@ -4045,8 +4049,9 @@ a.smaller-tiles{
 .post_content p{
     font-family: "arno-pro", serif;
     font-size: 16px;
+    margin-left: 0;
+    margin-right: 17px;
 }
-
 
 .post_summary p{
     font-family: "arno-pro", serif;
@@ -4206,11 +4211,15 @@ div.homepage-summary, div.single-issue-summary{
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#888888');
 }
 
-.black-hr{
+hr.black{
     border-color: #000;
 }
 
-.thin-hr{
+hr.thinner{
+  margin: 12px 0 12px 0;
+}
+
+hr.thin{
     margin: 0;
 }
 
@@ -4390,10 +4399,10 @@ article.issue h2{
     max-width: 80%;*/
 }
 
-#menu-footer-social-links{
+#menu-footer-social-links, #menu-footer-social-links-1{
     list-style: none;
 }
-#menu-footer-social-links li{
+#menu-footer-social-links li, #menu-footer-social-links-1 li{
     min-width: 40%;
 }
 
@@ -4418,6 +4427,104 @@ article.issue h2{
 }
 #footer-content a:hover{
   color: #fff;
+}
+
+/* -----------------------------------------
+   single-article.php - Displays featured image of all the Articles under the parent Issue                    
+   page-first-places.php
+*/
+
+.hover-over-article{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.hover-over-article a{
+  color: #fff;
+}
+
+.hover-over-article h1, 
+.hover-over-article h2, 
+.hover-over-article h3, 
+.hover-over-article h4, 
+.hover-over-article h5, 
+.hover-over-article h6, 
+.hover-over-article p {
+  font-family: "nimbus-sans", sans-serif;
+}
+
+.article-image-link:hover > .hover-over-article{
+    color: #fff;
+    opacity: 1;
+
+}
+
+.featured-image:hover > .hover-over-article{
+    color: #fff;
+    opacity: 1;
+
+}
+
+.article-image-link p, .article-image-link h5, .article-image-link h6 {
+  margin-bottom: 0;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.block-grid-size{
+  margin-right: 15px;
+  float: right;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  list-style: none;
+}
+
+.block-grid-size li{
+  float: left;
+  margin-left: 10px;
+}
+
+header p{
+  margin: 0;
+}
+
+/* -----------------------------------------
+   page-about.php - About and Contact Us page
+----------------------------------------- */
+
+.about-header{
+    text-align: center;
+}
+
+
+/* ------------------------------------------
+    sidebar.php
+--------------------------------------------*/
+
+#menu-footer-social-links.sidebar > li{
+  padding: 0 15px 0 15px;
+}
+
+
+
+.stMainServices{
+  height: 22px !important;
+}
+
+.stButton .stHBubble{
+  height: 22px !important;
 }
 
 /* Break-point for landscape mode iPad */
@@ -4490,78 +4597,4 @@ article.issue h2{
     .nav-bar li a{
         padding: 0 5px;
     }
-}
-/* -----------------------------------------
-   single-article.php - Displays featured image of all the Articles under the parent Issue                    
-   page-first-places.php
-*/
-
-.hover-over-article{
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    background-color: #000;
-    background-color: rgba(0,0,0,0.8);
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
-.hover-over-article a{
-  color: #fff;
-}
-
-.hover-over-article h1, 
-.hover-over-article h2, 
-.hover-over-article h3, 
-.hover-over-article h4, 
-.hover-over-article h5, 
-.hover-over-article h6, 
-.hover-over-article p {
-  font-family: "nimbus-sans", sans-serif;
-}
-
-.article-image-link:hover > .hover-over-article{
-    color: #fff;
-    opacity: 1;
-
-}
-
-.featured-image:hover > .hover-over-article{
-    color: #fff;
-    opacity: 1;
-
-}
-
-.article-image-link p, .article-image-link h5, .article-image-link h6 {
-  margin-bottom: 0;
-  margin-left: 17px;
-  margin-right: 17px;
-}
-
-.block-grid-size{
-  margin-right: 15px;
-  float: right;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  list-style: none;
-}
-
-.block-grid-size li{
-  float: left;
-  margin-left: 10px;
-}
-
-/* -----------------------------------------
-   page-about.php - About and Contact Us page
------------------------------------------ */
-
-.about-header{
-    text-align: center;
 }
