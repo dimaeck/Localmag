@@ -93,6 +93,11 @@ function foundation_js(){
     
     // wp_register_script( 'lightbox', get_template_directory_uri() . '/javascripts/lightbox.js' ); 
     // wp_enqueue_script( 'lightbox', 'jQuery', '1.0', true );
+    /* REQUIRES API CLIENT ID FOR OAUTH 
+     * USER ID is - 14739626
+     */
+    // wp_register_script( 'jquery-instagram', get_template_directory_uri() . '/javascripts/jquery.instagram.js' ); 
+    // wp_enqueue_script( 'jquery-instagram', 'jQuery', '1.0', true, true );
 }
 
 add_action('wp_enqueue_scripts', 'foundation_js');
@@ -265,55 +270,6 @@ function strip_empty_classes($menu) {
 }
 add_filter ('wp_nav_menu','strip_empty_classes');
 
-// // Walker class to customize footer links
-// class footer_links_walker extends Walker_Nav_Menu
-// {
-//       function start_el(&$output, $item, $depth, $args)
-//       {
-//             global $wp_query;
-//             $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-            
-//             $class_names = $value = '';
-            
-//             $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-            
-//             $class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-//             $class_names = ' class="'. esc_attr( $class_names ) . '"';
-           
-//             $output .= $indent . '<li ' . $value . $class_names .'>';
-
-//             $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-//             $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-//             $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-//             $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-
-//             $item_output = $args->before;
-//             $item_output .= '<a'. $attributes .'>';
-//             $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
-//             $item_output .= $args->link_after;
-            
-//             $item_output .= '</a>';
-//             $item_output .= $args->after;
-
-//             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-//             }
-            
-//         function start_lvl(&$output, $depth) {
-//             $indent = str_repeat("\t", $depth);
-//             $output .= "\n$indent<ul class=\"flyout\">\n";
-//         }
-            
-//         function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output )
-//             {
-//                 $id_field = $this->db_fields['id'];
-//                 if ( is_object( $args[0] ) ) {
-//                     $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
-//                 }
-//                 return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-//             }       
-// }
-
-
 // Add the Meta Box to the homepage template
 function add_homepage_meta_box() {  
     add_meta_box(  
@@ -445,9 +401,9 @@ add_action('save_post', 'save_homepage_meta');
     ?>
         <p>
             <label for="sponsor_url">Sponsors URL<br />
-                <textarea id="sponsor_url" name="sponsor_url" cols="45" rows="4">
+                <text id="sponsor_url" name="sponsor_url" cols="45" rows="4">
                     <?php if( $sponsor_url ) { echo $sponsor_url; } ?>
-                </textarea>
+                </text>
             </label>
         </p>
  <?php

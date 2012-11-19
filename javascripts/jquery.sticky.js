@@ -48,7 +48,7 @@
                         s.stickyElement.parent().removeClass(s.className);
                         
                         s.currentTop = null;
-                        $(".homepage-summary").css('margin-top', '');
+                        $(".homepage-summary about-header").css('margin-top', '');
                     }
                 }
                 else {
@@ -71,7 +71,7 @@
                         s.stickyElement.parent().addClass(s.className);
                         s.stickyElement.animate({ width:$window.width(), left:0 }, 600);
                         s.currentTop = newTop;
-                        $(".homepage-summary").css('margin-top', '-52px');
+                        $(".homepage-summary about-header").css('margin-top', '-52px');
                     }
                 }
             }
