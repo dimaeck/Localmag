@@ -12,7 +12,7 @@
                                 <div class="row">
                                     <div class="eight columns issue-summary">
                                         <p>
-                                            <?php echo the_content(); ?>
+                                            <?php echo $post->post_content; ?>
                                         </p>                                           
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="twelve columns">
                         <a href="<?php the_permalink();?>" class="no-hover">
-                            <h4><?php echo $post->post_title ?></h4>
+                            <h4><?php echo $post->post_title; ?></h4>
                         </a>
                         <hr /> 
                     </div>
