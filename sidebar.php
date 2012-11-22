@@ -17,13 +17,17 @@
     <div class="row">
     	<div class="twelve columns">
     		<h6>
-    			<a href=""><b>SHOP / ISSUE NO. 1</b></a>
+    			<a href=""><b>SUBSCRIBE</b></a>
     		</h6>
     		<a href="<?php the_permalink();?>" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png"/>
             </a>
 
-    		<p> Did you know the print version has over 80 pages of terrific content? </p>
+    		<?php
+                global $post;
+                $post = get_page_by_title('subscribe', OBJECT, 'page');
+                echo the_content();
+            ?>
     	</div>
     </div>
     <hr class="black thinner" />

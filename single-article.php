@@ -33,9 +33,6 @@
                                                     <span class='st_twitter_hcount'></span>
                                                 </li>
                                             </ul>
-                                            <!-- <span class='st_plusone_hcount'></span> -->
-                                            <!-- <span class='st_email_hcount'></span> -->
-                                            <!-- <span class='st_fblike_hcount'></span> -->
                                         </div>
                                     </div>
                                     <div class="row">

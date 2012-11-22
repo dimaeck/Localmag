@@ -23,7 +23,7 @@
                             while( $query->have_posts() ) : $query->the_post(); 
                                 $id = $query->post->ID;
                         ?>
-                        <a href="<?php the_permalink(); ?>">Issue No. <?php echo get_post_meta($id, 'issue_number', true); ?></a>
+                        <a href="<?php echo get_permalink(61); ?>">Issue No. <?php echo get_post_meta($id, 'issue_number', true); ?></a>
                         <?php    
                             endwhile;
                         ?>
