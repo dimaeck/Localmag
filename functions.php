@@ -121,15 +121,21 @@ add_action('wp_enqueue_scripts', 'wp_foundation_js');
 //add_action('wp_enqueue_scripts', 'typekit_js');
 
 function localmag_main_nav() {
-    wp_nav_menu( 
-        array( 
-            'menu' => 'main_nav', /* menu name */
-            'menu_class' => 'top-nav nav-bar',
-            'theme_location' => 'main_nav', /* where in the theme it's assigned */
-            'container' => 'false', /* container tag */
-            'depth' => '1'
-        )      
-    );
+    echo '<ul id="menu-main-nav" class="nav-wrapper nav-styles top-nav nav-bar block-grid six-up mobile">';
+    echo    '<li class="nav-blog-title">';
+    echo        '<h5 style="margin: 0; padding: 0 20px 0 20px;"><a href="' . get_bloginfo('url') . '"> Local Magazine </a></h5>';
+    echo    '</li>';
+            wp_nav_menu(
+                array( 
+                    'menu' => 'main_nav', /* menu name */
+                    'menu_class' => '',
+                    'theme_location' => 'main_nav', /* where in the theme it's assigned */
+                    'container' => 'false', /* container tag */
+                    'depth' => '1',
+                    'items_wrap' => '%3$s'
+                )      
+            );
+    echo '</ul>';
 }
 
 function localmag_footer_links() { 

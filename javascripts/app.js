@@ -112,8 +112,8 @@ jQuery(document).ready(function ($) {
     $('.hover-over-article').animate({opacity:'1'});
   });
 
-  $("#nav").sticky({topSpacing:52});
-
-  // $('.stMainServices').css('height', '22px');
-
+  
+  if( $(window).width() > 767 ){
+    $("#menu-main-nav").sticky({topSpacing:52});
+  }
 });

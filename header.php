@@ -51,18 +51,13 @@
                                 </div>
                             <?php } ?>
                             <div class="row normal-header-here">
-                                <div id="nav" class="nav-wrapper header-styles mobile-hide">
+                                <!-- <div id="nav" class="header-styles mobile-hide"> -->
                                     <div class="row">
-                                        <div class="offset-by-half three columns">
-                                            <h5> 
-                                                <a href="<?php echo get_bloginfo('url'); ?>"> Local Magazine </a>
-                                            </h5>
-                                        </div>
-                                        <div class="eight columns">
+                                        <div class="twelve columns">
                                                     <?php localmag_main_nav(); // Adjust using Menus in Wordpress Admin ?>                                                
                                         </div>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>

@@ -934,12 +934,33 @@ that IE7/8 do not support :nth-child.
     margin-left: 0;
   }
 
-  /* line 131, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/grid.scss */
-  .block-grid.mobile > li {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
+  /* Block Grids --- */
+  /*                 */
+  .block-grid.mobile > li { float: none; width: 100%; margin-left: 0; }
+  .block-grid > li { clear: none !important; }
+  .block-grid.mobile-one-up > li { width: 100%; }
+  .block-grid.mobile-two-up > li { width: 50%; }
+  .block-grid.mobile-two-up > li:nth-child(2n+1) { clear: both; }
+  .block-grid.mobile-three-up > li { width: 33.33333%; }
+  .block-grid.mobile-three-up > li:nth-child(3n+1) { clear: both; }
+  .block-grid.mobile-four-up > li { width: 25%; }
+  .block-grid.mobile-four-up > li:nth-child(4n+1) { clear: both; }
+  .block-grid.mobile-five-up > li { width: 20%; }
+  .block-grid.mobile-five-up > li:nth-child(5n+1) { clear: both; }
+  .block-grid.mobile-six-up > li { width: 16.66667%; }
+  .block-grid.mobile-six-up > li:nth-child(6n+1) { clear: both; }
+  .block-grid.mobile-seven-up > li { width: 14.28571%; }
+  .block-grid.mobile-seven-up > li:nth-child(7n+1) { clear: both; }
+  .block-grid.mobile-eight-up > li { width: 12.5%; }
+  .block-grid.mobile-eight-up > li:nth-child(8n+1) { clear: both; }
+  .block-grid.mobile-nine-up > li { width: 11.11111%; }
+  .block-grid.mobile-nine-up > li:nth-child(9n+1) { clear: both; }
+  .block-grid.mobile-ten-up > li { width: 10%; }
+  .block-grid.mobile-ten-up > li:nth-child(10n+1) { clear: both; }
+  .block-grid.mobile-eleven-up > li { width: 9.09091%; }
+  .block-grid.mobile-eleven-up > li:nth-child(11n+1) { clear: both; }
+  .block-grid.mobile-twelve-up > li { width: 8.33333%; }
+  .block-grid.mobile-twelve-up > li:nth-child(12n+1) { clear: both; }
 }
 /* Requires:
    globals.css */
@@ -4047,7 +4068,7 @@ a.smaller-tiles{
 }
 
 /********* Font Styles *********/
-.header-styles a {
+.nav-styles a {
     font-family: "nimbus-sans", sans-serif;
 }
 
@@ -4103,69 +4124,30 @@ div.homepage-summary, div.single-issue-summary{
 }
 
 /********** Header styles **************/
-/*.overlay h1{
-    font-size: 60px;
-    letter-spacing: 2px;
-}
-.header-logo{
-    margin-top: -33%;
-}*/
-/*.subhead{
-    color: #fff;
-}*/
-#logo{
-    color: #fff;
-}
-#nav{
-    position: relative;
-    z-index: 1000;
-    width: 1000px;
-    max-width: 100%;
-    margin-top: -52px;
-}
-#nav-mobile{
-    position: absolute;
-    z-index: 1000;
-    width: 1000px;
-    max-width: 100%;
-    /*margin-top: -52px;*/
-}
 
-#nav h5 a {
-    color: #fff;
-}
-.nav-wrapper{
+#menu-main-nav{
     background-color: #000;
     background-color: rgba(0,0,0,0.8);
     padding-top: 1px;
-    height: 50px;
+    /*height: 50px;*/
     margin: 0 auto;
+    margin-top: -52px;
+    z-index: 9999;
 }
 
-.nav-wrapper-mobile{
-    padding-top: 1px;
-    height: 50px;
-    margin: 0 auto;
+#menu-main-nav > li{
+  margin-top: 14px;
+  margin-bottom: 14px;
+  float: right;
 }
 
-.nav-wrapper h5{
-    float: left;
-    color: #fff;
-    margin-left: 15px;
-
-}
-.nav-bar{
-    margin-top: 14px;
-    margin-bottom: 14px;
+#menu-main-nav .nav-blog-title{
+  float: left; 
+  border-right: none;
 }
 
-.nav-bar li {
-    float: right;
-
-}
-
-#menu-main-nav{
-    margin-right: 50px;
+#menu-main-nav .nav-blog-title h5 a{
+  color: #fff;
 }
 
 /* End of Header Styles */
@@ -4584,27 +4566,18 @@ a.mini-text{
 
 /* Break-point for portrait mode iPad */
 @media only screen and (max-width: 767px) {
-    
-    /* For the nav bar, override the foundation float: nones; */
-    #nav .column, #nav .columns{
-      float:left;
+    #menu-main-nav{
+      margin-top: -2px;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.9);
     }
-    #nav [class*="column"] + [class*="column"]:last-child {
-      float: right;
+    #menu-main-nav > li{
+      margin: 5px 0 5px 0;
+      text-align: center;
     }
-
     /* for the footer */
     #footer-content .offset-by-half{
         margin-left: 0;
-    }
-    
-    #menu-main-nav{
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    
-    #menu-footer-links li{
-        min-width: 0;
     }
 }
 
