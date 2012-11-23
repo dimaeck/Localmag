@@ -8,15 +8,15 @@
                 <div class="row">
                     <div class="twelve columns panel homepage-summary">
                         <div class="row">
-                            <div class="seven columns">
+                            <div class="seven columns mobile-four">
                                 <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
                             </div>
-                            <div class="offset-by-one one-and-half columns mobile-hide">
+                            <div class="offset-by-one one-and-half columns mobile-two">
                                 <a href="<?php echo site_url('/shop');?>" >
                                     <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/cover_issue1.jpg" />
                                 </a>
                             </div>
-                            <div class="two columns end mini-text-wrapper">
+                            <div class="two columns end mini-text-wrapper mobile-two">
                                 <h5> <strong> Issue No. 1 </strong> </h5>
                                 <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
                             </div>

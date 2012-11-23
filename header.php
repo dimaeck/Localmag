@@ -40,24 +40,20 @@
                 <div class="twelve columns">
                     <div class="row">
                         <div class="twelve columns">
-                            <?php if ( ! strpos('iPhone', $_SERVER['HTTP_USER_AGENT']) ){ ?>
-                                <div class="row">
-                                        <?php
-                                            $image_num = rand(1,6);
-                                        ?>
-                                        <a href="<?php echo site_url();?>">
-                                           <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image"/>
-                                        </a>
-                                </div>
-                            <?php } ?>
+                            <div class="row">
+                                    <?php
+                                        $image_num = rand(1,6);
+                                    ?>
+                                    <a href="<?php echo site_url();?>">
+                                       <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image"/>
+                                    </a>
+                            </div>
                             <div class="row normal-header-here">
-                                <!-- <div id="nav" class="header-styles mobile-hide"> -->
-                                    <div class="row">
-                                        <div class="twelve columns">
-                                                    <?php localmag_main_nav(); // Adjust using Menus in Wordpress Admin ?>                                                
-                                        </div>
+                                <div class="row">
+                                    <div class="twelve columns">
+                                                <?php localmag_main_nav(); // Adjust using Menus in Wordpress Admin ?>                                                
                                     </div>
-                                <!-- </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
