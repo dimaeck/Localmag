@@ -93,12 +93,12 @@
                             <li>
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/team/allison_davis.jpg"/>
                                 <h5>Allison P. Davis</h5>
-                                <span class="sub-title">MANAGING EDITOR</span>
+                                <span class="sub-title">COPYWRITER</span>
                             </li>
                             <li>
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/team/samantha_moore.jpg"/>
                                 <h5>Samantha Moore</h5>
-                                <span class="sub-title">COPYWRITER</span>
+                                <span class="sub-title">MANAGING EDITOR</span>
                             </li>
                         </ul>
                     </div>

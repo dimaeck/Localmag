@@ -98,6 +98,11 @@
                         </ul>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <?php get_template_part('nav', 'single', 'article'); ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

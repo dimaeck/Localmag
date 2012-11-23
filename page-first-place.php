@@ -13,7 +13,7 @@
                             </div>
                             <div class="offset-by-one one-and-half columns mobile-hide">
                                 <a href="<?php echo site_url('/shop');?>" >
-                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/magazine-stack.png" />
+                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/cover_issue1.jpg" />
                                 </a>
                             </div>
                             <div class="two columns end mini-text-wrapper">

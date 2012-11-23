@@ -3953,7 +3953,7 @@ ul.orbit-bullets li.active.has-thumb {
 ----------------------------------------- */
 
 .row .container{
-    width: 1000px;
+    max-width: 1000px;
     float: none;
     margin: 0 auto;
 }
@@ -4343,6 +4343,14 @@ article.issue h2{
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
+}
+
+
+/***** FOOOTER *****/
+
+.navigation a:hover{
+  color: #000;
+  font-weight: bold;
 }
 
 .footer-row {

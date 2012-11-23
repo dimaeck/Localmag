@@ -22,11 +22,9 @@
     		<a href="<?php the_permalink();?>" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png"/>
             </a>
-
     		<?php
-                global $post;
                 $post = get_page_by_title('subscribe', OBJECT, 'page');
-                echo the_content();
+                echo $post->post_content;
             ?>
     	</div>
     </div>

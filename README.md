@@ -1,6 +1,6 @@
-=======
-Localmag
-========
+==============
+== Localmag ==
+==============
 
 Localmag wordpress theme
 

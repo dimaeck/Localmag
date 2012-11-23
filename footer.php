@@ -2,7 +2,7 @@
     <div class="row">
         <div id="footer-content" class="twelve columns">
             <div class="row container footer-row">
-                <div class="three columns">
+                <div class="three columns mobile-four">
                     <h6>&nbsp;</h6>
                     <hr />
                     <p>
@@ -14,7 +14,7 @@
                     ?>
                     <a href="<?php echo get_permalink($pageId);?>">Learn More</a>
                 </div>
-                <div class="one-and-half columns">
+                <div class="one-and-half columns mobile-two">
                     <h6>Shop</h6>
                     <hr />
                         <?php
@@ -28,19 +28,19 @@
                             endwhile;
                         ?>
                 </div>
-                <div class="two columns">
+                <div class="two columns mobile-two">
                     <h6>Follow Us</h6>	
                     <hr />
                     <?php localmag_footer_links(); ?>
                 </div>
-                <div class="three columns">
+                <div class="three columns mobile-two">
                     <h6>Twitter</h6>
                     <hr />
                     <div id="twitter-feed">
                         
                     </div>
                 </div>
-                <div class="two-and-half columns end">
+                <div class="two-and-half columns end mobile-two">
                     <div id="mailing-list">
                         <h6> Mailing List </h6>
                         <hr />
