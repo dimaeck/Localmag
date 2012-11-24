@@ -71,7 +71,7 @@
                         s.stickyElement.parent().addClass(s.className);
                         s.stickyElement.animate({ width:$window.width(), left:0 }, 600);
                         s.currentTop = newTop;
-                        $(".homepage-summary about-header").css('margin-top', '-52px');
+                        $(".homepage-summary about-header").css('margin-top', '-54px');
                     }
                 }
             }

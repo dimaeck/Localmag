@@ -478,7 +478,7 @@ add_action('save_post', 'save_homepage_meta');
     
     function myfeed_request($qv) {
         if (isset($qv['feed']))
-            $qv['post_type'] = get_post_type('issue');
+            $qv['post_type'] = 'issue';
         return $qv;
     }
     

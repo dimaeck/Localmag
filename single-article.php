@@ -23,20 +23,56 @@
                                             </h1>
                                             <p class="meta"><?php echo strtoupper( get_the_title($post->post_parent) );?> -- Written by <?php the_author();?> </p>
                                         </header>
+
                                     </div>
                                     <div class="two columns end">
-                                        <ul style="list-style: none; margin-top:50px; float:right;">
-                                            <li>
-                                                <span class='st_sharethis_hcount'></span>
-                                            </li>
-                                            <li>
-                                                <span class='st_twitter_hcount'></span>
-                                            </li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="nine columns">
+                                        <ul class="block-grid seven-up social-icon" style="float: left; list-style: none;">
+                                            <li>
+                                                <a href="http://pinterest.com">
+                                                    <i class="foundicon-pinterest social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://plus.google.com">
+                                                    <i class="foundicon-google-plus social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://twitter.com">
+                                                    <i class="foundicon-twitter social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://facebook.com">
+                                                    <i class="foundicon-facebook social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://instagram.com">
+                                                    <i class="foundicon-instagram social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://stumble-upon.com">
+                                                    <i class="foundicon-stumble-upon social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/rss">
+                                                    <i class="foundicon-rss social-icon"></i>                                                    
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/instapaper-29.png" style="vertical-align: text-top;" />
+                                                </a>
+                                            </li>
+                                        </ul>
                                         <hr class="black"/>
                                     </div>
                                 </div>
