@@ -20,7 +20,7 @@
         $window = $(window),
         $document = $(document),
         sticked = [],
-        windowHeight = $window.height(),
+        windowHeight = window.innerHeight ? window.innerHeight : $(window).height(),
         scroller = function() {
             var scrollTop = $window.scrollTop(),
                 documentHeight = $document.height(),
