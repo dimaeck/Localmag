@@ -13,7 +13,7 @@
                             </div>
                             <div class="offset-by-one one-and-half columns mobile-two">
                                 <a href="<?php echo site_url('/shop');?>" >
-                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/cover_issue1.jpg" />
+                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/cover_issue1.jpg" alt="Issue 1 cover" />
                                 </a>
                             </div>
                             <div class="two columns end mini-text-wrapper mobile-two">
@@ -29,24 +29,6 @@
     $mypostid = 6;
     $post = get_post($mypostid, OBJECT);
 ?>
-                <!-- <div class="row">
-                    <div class="twelve columns clearfix">
-                        <div class="row">
-                            <div class="twelve columns panel single-issue-summary">
-                                <div class="row">
-                                    <div class="five columns">
-                                        <?php $attr = array( 'title' => '' ); the_post_thumbnail( 'wpf-featured', $attr ); ?>
-                                    </div>
-                                    <div class="seven columns issue-summary">
-                                        <p>
-                                            <?php echo the_content(); ?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -84,38 +66,35 @@
                             <li>
                                 <div class="row">
                                     <div class="twelve columns article-image-link">
-                                        
                                         <div class="featured-image">
                                             <a href="<?php the_permalink();?>">
                                                 <?php $attr = array( 'title' => '', 'class' => 'issue-featured' ); the_post_thumbnail( 'wpf-featured', $attr ); ?>
                                             </a>
                                             <div class="featured-image-description">
-                                                <p><?php echo get_featured_image_description();?></p>
-                                                <img class="article-icon" src="<?php echo get_template_directory_uri(); ?>/images/article-icon.png" />
+                                                <p>
+                                                    <?php echo get_featured_image_description();?>
+                                                </p>
+                                                <img class="article-icon" src="<?php echo get_template_directory_uri(); ?>/images/article-icon.png" alt="article" />
                                             </div>
                                             <div class="hover-over-article">
-                                                <!-- <div class="hover-over-wrapper"> -->
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <div class="row">
-                                                            <div class="twelve columns">
-                                                                <h5> <?php the_title(); ?> </h5>
-                                                            </div>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <div class="row">
+                                                        <div class="twelve columns">
+                                                            <h5> <?php the_title(); ?> </h5>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="twelve columns">
-                                                                <h6><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time></h6>
-                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="twelve columns">
+                                                            <h6><time datetime="<?php echo the_time('Y-m-j'); ?>"><?php the_time('F jS, Y'); ?></time></h6>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="twelve columns">
-                                                                <hr />
-                                                                <p> 
-                                                                    <?php the_excerpt();?>
-                                                                </p>
-                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="twelve columns">
+                                                            <hr />
+                                                            <?php the_excerpt(); ?>
                                                         </div>
-                                                    </a>
-                                                <!-- </div> -->
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

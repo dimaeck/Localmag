@@ -45,7 +45,7 @@
                                         $image_num = rand(1,6);
                                     ?>
                                     <a href="<?php echo site_url();?>">
-                                       <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image"/>
+                                       <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image" alt="Localmag"/>
                                     </a>
                             </div>
                             <div class="row normal-header-here">
