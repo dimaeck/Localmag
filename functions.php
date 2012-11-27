@@ -406,11 +406,8 @@ add_action('save_post', 'save_homepage_meta');
         $sponsor_url = get_post_meta( $post->ID, 'sponsor_url', true);
     ?>
         <p>
-            <label for="sponsor_url">Sponsors URL<br />
-                <text id="sponsor_url" name="sponsor_url" cols="45" rows="4">
-                    <?php if( $sponsor_url ) { echo $sponsor_url; } ?>
-                </text>
-            </label>
+            <label for="sponsor_url">Sponsors URL<br /></label>
+                <input type="text" id="sponsor_url" name="sponsor_url" style="width: 300px;" value="<?php if( $sponsor_url ) { echo $sponsor_url; } ?>">
         </p>
  <?php
     }

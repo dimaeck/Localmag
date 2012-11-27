@@ -18,12 +18,15 @@
                             <h6>Shop</h6>
                             <hr />
                                 <?php
+                                    $page = get_page_by_title( 'Shop' );
+                                    $pageId = $page->ID;
+                                    
                                     $query = new WP_Query( array( 'post_type' => 'issue', 'post_parent' => 0 ) );
 
                                     while( $query->have_posts() ) : $query->the_post(); 
                                         $id = $query->post->ID;
                                 ?>
-                                <a href="<?php echo get_permalink(61); ?>">Issue No. <?php echo get_post_meta($id, 'issue_number', true); ?></a>
+                                <a href="<?php echo get_permalink($pageId);?>">Issue No. <?php echo get_post_meta($id, 'issue_number', true); ?></a>
                                 <?php    
                                     endwhile;
                                 ?>
