@@ -31,7 +31,7 @@
 <div class="row">
     <div class="twelve columns">
         <div class="row container">
-            <?php if( is_user_logged_in() ){ ?>
+            <?php //if( is_user_logged_in() ){ ?>
             <div class="twelve columns clearfix">
                 <div class="row">
                     <div class="nine columns">
@@ -43,7 +43,7 @@
                                             <div class="ten columns centered">
                                                     <div class="featured-image">
                                                         <a href="<?php the_permalink();?>" />
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png" style="height:300px;" alt="magazine stack"/>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/subscription_photo.jpg" style="height:300px;" alt="magazine stack"/>
                                                         </a>
                                                     </div>
                                                     <hr />
@@ -138,8 +138,8 @@
                 </div>
                 <br />
 
-                <?php }else{ ?>
-                <br />
+                <?php //}else{ ?>
+<!--                 <br />
                 <br />
                 <br />
                 <br />
@@ -157,9 +157,9 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
 
-            <?php } ?>
+            <?php //} ?>
     </div>
 </div>
 <?php get_footer(); ?>
