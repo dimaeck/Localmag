@@ -335,11 +335,13 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 
 //		if($postage_cost != 0) {
                         
-                        $output .= "
+        $output .= "
 			<tr>
 				<td colspan=\"1\" class=\"subcell\">".get_option('subtotal_text').": </td>
-				<td colspan=\"3\" class=\"left\">".print_payment_currency($total, $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))."</td></tr>
-			<tr>
+				<td colspan=\"3\" class=\"left\">".print_payment_currency($total, $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))." +shipping and tax</td></tr>
+			<tr>";
+/*			
+			$output .="
 				<td colspan=\"1\" class=\"shipcell\">".get_option('shipping_text').": </td>
                                 <td colspan=\"3\" class=\"shipcell\">United States $2/$4</td>
                         <tr>
@@ -350,6 +352,7 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
                                 <td colspan=\"1\" class=\"shipcell\"></td>
                                 <td colspan=\"3\" class=\"shipcell\">International $6/$12</td>
                         </tr>";
+*/                        
 //                        <td colspan=\"2\" class=\"left\">".print_payment_currency($postage_cost, $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))."</td>
 //		} 
 //                elseif ($postage_cost == 0 && get_option('display_free_shipping') == 1) {
@@ -361,20 +364,23 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 		if( $display_vat != '' && is_numeric($display_vat) ) {
 			
 			$vat = ($total*$display_vat) / 100;
-			
+/*			
 			$output .= "
 			<tr>
 				<td colspan=\"2\" class=\"shipcell\">".(__("VAT", "WUSPSC"))." (".$display_vat."%): </td>
 				<td colspan=\"2\" class=\"left\">".print_payment_currency($vat, $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))."</td></tr>";
-				
+*/				
 			$total = $total+$vat;
 		}
-                
+
+/*                
 		$output .= "
    		<tr>
    			<td colspan=\"2\" class=\"totalcel\">".get_option('total_text').": </td>
-   			<td colspan=\"2\" class=\"left\">".print_payment_currency(($total+$postage_cost), $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))." +shipping +tax </td>
+   			<td colspan=\"2\" class=\"left\">".print_payment_currency(($total+$postage_cost), $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))." plus shipping and tax </td>
    		</tr>
+*/   		
+   		$output .= "
    		<tr>
    			<td colspan=\"4\">";
    		
