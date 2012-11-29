@@ -4216,7 +4216,7 @@ ul.social-icon > li > a{
 }
 
 .byline{
-    font-family: "nimbus-sans", sans-serif;
+    /*font-family: "nimbus-sans", sans-serif;*/
     font-size: 20px;
 }
 .post_content p{

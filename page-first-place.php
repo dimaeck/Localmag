@@ -62,6 +62,7 @@
                                 if ($loop->have_posts()){
                                     while ($loop->have_posts()){
                                         $loop->the_post();
+                                        
                              ?>
                             <li>
                                 <div class="row">
@@ -80,12 +81,13 @@
                                                 <a href="<?php the_permalink(); ?>">
                                                     <div class="row">
                                                         <div class="twelve columns">
-                                                            <h5> <?php the_title(); ?> </h5>
+                                                            <h5> <?php the_title(); ?></h5>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="twelve columns">
-                                                            <h6><time datetime="<?php echo the_time('Y-m-j'); ?>"><?php the_time('F jS, Y'); ?></time></h6>
+                                                            <!-- <h6><time datetime="<?php echo the_time('Y-m-j'); ?>"><?php the_time('F jS, Y'); ?></time></h6> -->
+                                                            <h6> Issue <?php echo get_post_meta($post->post_parent, 'issue_number', true); ?> </h6>
                                                         </div>
                                                     </div>
                                                     <div class="row">
