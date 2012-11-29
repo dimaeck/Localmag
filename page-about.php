@@ -7,13 +7,7 @@
 <?php get_header(); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="row about-header">
-                    <div class="three columns">
-                        <a href="<?php the_permalink();?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png" alt="magazine stack"/>
-                        </a>
-                        <br />
-                    </div>
-                    <div class="nine columns">
+                    <div class="twelve columns">
                         <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
                                 <header>
                                         <!-- <h1 class="about-header"><?php the_title(); ?></h1> -->
@@ -116,7 +110,7 @@
                 </div>
                 <div class="row spacer">
                     <div class="twelve columns">
-                        <h4 class="no-margin">LOCALMAG KICKSTARTER VIDEO</h4>
+                        <h4 class="no-margin">KICKSTARTER VIDEO</h4>
                         <hr/>
                     </div>
                 </div>

@@ -30,7 +30,7 @@
 <br />
 <div class="row">
     <div class="twelve columns">
-        <div class="row container">
+        <div class="row container spacer">
             <?php //if( is_user_logged_in() ){ ?>
             <div class="twelve columns clearfix">
                 <div class="row">
@@ -113,7 +113,7 @@
                     $page = get_page_by_title( 'Subscribe' );
                 ?>
                     <div class="three columns end">
-                        <h2 style="margin-top:0;">Subscribe</h2>
+                        <!-- <h2 style="margin-top:0;">Subscribe</h2>
                         <hr class="black-hr" />
                         <p>
                             <?php //echo $page->post_content; ?>
@@ -129,7 +129,7 @@
                                 <br>
                                 <button class="button" type="submit">Subscribe</button>
                             </div>
-                        </form>
+                        </form> -->
                         <?php 
                             $args = array('classname' => 'widget_wp_paypal_shopping_cart', 'description' => __("Display WP Ultra Simple Paypal Shopping Cart.", "WUSPSC") );
                             show_wp_paypal_shopping_cart_widget($args); 

@@ -3,16 +3,33 @@
                 <div id="footer-content" class="twelve columns">
                     <div class="row container footer-row">
                         <div class="three columns mobile-four">
-                            <h6>&nbsp;</h6>
-                            <hr />
-                            <p>
-                                Local: A Quarterly of People and Places commits to penning the overlooked America, bringing you the neglected narrative of this country.
-                            </p>
-                            <?php
-                                $page = get_page_by_title( 'About & Contact' );
-                                $pageId = $page->ID;
-                            ?>
-                            <a href="<?php echo get_permalink($pageId);?>">Learn More</a>
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <h6>&nbsp;</h6>
+                                    <hr />
+                                    <p>
+                                        Local: A Quarterly of People and Places commits to penning the overlooked America, bringing you the neglected narrative of this country.
+                                    </p>
+                                    <?php
+                                        $page = get_page_by_title( 'About & Contact' );
+                                        $pageId = $page->ID;
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <a href="<?php echo get_permalink($pageId);?>">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="twelve columns" style="float: left; margin-top: 75px;">
+
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">
+                                        <img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a>
+                                        <br />
+                                        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="one-and-half columns mobile-two">
                             <h6>Shop</h6>
@@ -86,8 +103,6 @@
                       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
                     })();
                  </script>
-                <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-                <script type="text/javascript">stLight.options({publisher: "a42ff0ff-f29f-4adc-aaab-79e02702726f"});</script>
             </div>
         </footer>
     </body>

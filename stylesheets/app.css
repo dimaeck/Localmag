@@ -4271,16 +4271,17 @@ div.homepage-summary, div.single-issue-summary{
 #menu-main-nav{
     background-color: #000;
     background-color: rgba(0,0,0,0.8);
-    padding-top: 1px;
-    /*height: 50px;*/
+    height: 50px;
     margin: 0 auto;
-    margin-top: -54px;
+    margin-top: -52px;
     z-index: 9999;
 }
 
 #menu-main-nav > li{
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 14px;
   float: right;
 }
 
@@ -4291,6 +4292,7 @@ div.homepage-summary, div.single-issue-summary{
 
 #menu-main-nav .nav-blog-title h5 a{
   color: #fff;
+  font-family: "arno-pro", serif;
 }
 
 /* End of Header Styles */
@@ -4653,7 +4655,7 @@ header p{
 }
 
 .row.about-header p{
-  font-family: "nimbus-sans", sans-serif;
+  font-family: "arno-pro", serif;
 }
 
 .team h5{
