@@ -1,4 +1,4 @@
-<div class="sidebar three columns">
+<div class="sidebar three columns hide-on-print">
 	<div class="row">
 		<div class="twelve columns">
 			<h6 class="no-margin">
@@ -19,9 +19,27 @@
     		<h6>
     			<a href=""><b>SUBSCRIBE</b></a>
     		</h6>
-    		<a href="<?php the_permalink();?>" />
-                <img style="margin-bottom: 14px;" src="<?php echo get_template_directory_uri(); ?>/images/multiple_covers.png"/>
-            </a>
+        <?php 
+            $args = array('post_type' => 'issue', 'post_parent' => 0, 'post_per_page' => 10);
+            $loop = new WP_Query( $args );
+            $counter = 0;
+            if ($loop->have_posts() && $counter == 0) : while ($loop->have_posts()) : $loop->the_post(); 
+        ?>
+                <a href="<?php the_permalink();?>" />
+                    <?php                                                         
+                        if( class_exists( 'kdMultipleFeaturedImages' ) ) {
+                            $attr = array('class' => 'shadow shop-image');
+                            kd_mfi_the_featured_image( 'issue-cover', 'issue', 'localmag-issue', NULL, $attr );
+                            $counter++;
+                        }else{
+                            the_post_thumbnail( 'wpf-featured' );
+                            $counter++;
+                        }
+                    ?> 
+                </a>
+                <?php endwhile; ?>
+            <?php endif; ?>
+
     		<span>
                 <?php
                     $post = get_page_by_title('subscribe', OBJECT, 'page');

@@ -70,29 +70,137 @@
                         <hr class="black" />
                         <ul class="block-grid three-up black-hover team">
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/team/dan_webster.jpg" alt="Dan Webster"/>
+                                <div class="team-image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/team/dan_webster.jpg" alt="Dan Webster"/>
+
+
+                                    <div class="hover-over-article">
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <h6 style="text-align: center;">EDITOR-IN-CHIEF</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <hr />
+                                                <p>
+                                                    <?php
+                                                        $user = get_user_by('login', 'dan webster');
+                                                        $user_data = get_userdata($user->ID);
+                                                        echo $user_data->user_description;
+                                                    ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <h5>Dan Webster</h5>
                                 <span class="sub-title">EDITOR-IN-CHIEF</span>
                             </li>
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/team/diana_ecker.jpg" alt="Diana Ecker"/>
+                                <div class="team-image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/team/diana_ecker.jpg" alt="Diana Ecker"/>
+                                    <div class="hover-over-article">
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <h6 style="text-align: center;">ART & DEVELOPMENT DIRECTOR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <hr />
+                                                <p>
+                                                    <?php
+                                                        $user = get_user_by('login', 'diana@localmag.org');
+                                                        $user_data = get_userdata($user->ID);
+                                                        echo $user_data->user_description;
+                                                    ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <h5>Diana Ecker</h5>
                                 <span class="sub-title">ART & DEVELOPMENT DIRECTOR</span>
                             </li>
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/team/amanda_hakanson-stacy.jpg" alt="Amanda Hakanson-Stacy"/>
-                                <h5>Amanda Hakanson-Stacy</h5>
-                                <span class="sub-title">CREATIVE DIRECTOR</span>
+                                <div class="team-image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/team/amanda_hakanson-stacy.jpg" alt="Amanda Hakanson-Stacy"/>
+                                    <div class="hover-over-article">
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <h6 style="text-align: center;">CREATIVE DIRECTOR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <hr />
+                                                <p>
+                                                    <?php
+                                                        $user = get_user_by('login', 'amanda@localmag.org');
+                                                        $user_data = get_userdata($user->ID);
+                                                        echo $user_data->user_description;
+                                                    ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5>Amanda Hakanson-Stacy</h5>
+                                    <span class="sub-title">CREATIVE DIRECTOR</span>
+                                </div>
                             </li>
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/team/allison_davis.jpg" alt="Allison Davis"/>
-                                <h5>Allison P. Davis</h5>
-                                <span class="sub-title">COPYWRITER</span>
+                                <div class="team-image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/team/allison_davis.jpg" alt="Allison Davis"/>
+                                    <div class="hover-over-article">
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <h6 style="text-align: center;">EDITOR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <hr />
+                                                <p>
+                                                    <?php
+                                                        // $user = get_user_by('login', 'allison@localmag.org');
+                                                        // $user_data = get_userdata($user->ID);
+                                                        // echo $user_data->user_description;
+                                                    ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5>Allison P. Davis</h5>
+                                    <span class="sub-title">EDITOR</span>
+                                </div>
+
                             </li>
                             <li>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/team/samantha_moore.jpg" alt="Samantha Moore"/>
-                                <h5>Samantha Moore</h5>
-                                <span class="sub-title">MANAGING EDITOR</span>
+                                <div class="team-image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/team/samantha_moore.jpg" alt="Samantha Moore"/>
+                                    <div class="hover-over-article">
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <h6 style="text-align: center;">MANAGING EDITOR</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="twelve columns">
+                                                <hr />
+                                                <p>
+                                                    <?php
+                                                        // $user = get_user_by('login', 'samantha@localmag.org');
+                                                        // $user_data = get_userdata($user->ID);
+                                                        // echo $user_data->user_description;
+                                                    ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5>Samantha Moore</h5>
+                                    <span class="sub-title">MANAGING EDITOR</span>
+                                </div>
                             </li>
                         </ul>
                     </div>

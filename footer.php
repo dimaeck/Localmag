@@ -1,4 +1,4 @@
-        <footer role="contentinfo" class="clearfix">
+        <footer role="contentinfo" class="hide-on-print clearfix">
             <div class="row">
                 <div id="footer-content" class="twelve columns">
                     <div class="row container footer-row">

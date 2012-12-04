@@ -9,7 +9,7 @@
                     <div class="twelve columns panel homepage-summary">
                         <div class="row">
                             <div class="seven columns">
-                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
+                                <p class="byline"> <span class="bold">Our quarterly print edition chronicles one town per issue with over 90 pages of features, infographics and photo spreads.</span></p>
                             </div>
                             <div class="offset-by-one one-and-half columns mobile-hide">
                                 <a href="<?php echo site_url('/shop');?>" >

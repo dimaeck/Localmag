@@ -9,7 +9,7 @@
                     <div class="twelve columns panel homepage-summary">
                         <div class="row">
                             <div class="seven columns mobile-four">
-                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
+                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> tracks down overlooked communities and chronicles the neglected American narrative. </p>
                             </div>
                             <div class="offset-by-one one-and-half columns mobile-two">
                                 <a href="<?php echo site_url('/shop');?>" >

@@ -17,7 +17,7 @@
 						 );
 ?>
 
-<div class="row navigation">
+<div class="row navigation hide-on-print">
 	<div class="six mobile-two columns">
 		<?php previous_post_link();?>
 	</div>

@@ -392,7 +392,7 @@ abbr {
 
   @page {
     margin: 0.5cm;
-}
+  }
 
   /* line 79, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/typography.scss */
   p, h2, h3 {
@@ -418,6 +418,7 @@ abbr {
 /* The Grid ---------------------- */
 /* line 7, ../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.4/stylesheets/foundation/grid.scss */
 .row {
+  width: 100%;
   max-width: 100%;
   min-width: 768px;
   margin: 0 auto;
@@ -4658,21 +4659,38 @@ header p{
   font-family: "arno-pro", serif;
 }
 
+.team > li{
+  margin-top: 15px;
+}
+
 .team h5{
   margin: 0;
   font-weight: bold;
 
 }
+
+.team-image{
+    position: relative;
+}
+
+.team-image img{
+    border-style: none; /* This is for IE only */
+    vertical-align: baseline;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.team-image:hover > .hover-over-article{
+    color: #fff;
+    opacity: 1;
+}
+
 .sub-title{
   margin: 0;
   font-size: 10px;
   float: left;
   color: #777;
   font-weight: bold;
-}
-
-.team > li{
-  margin-top: 15px;
 }
 
 .row.about-container h1, 
