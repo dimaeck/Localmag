@@ -4562,6 +4562,9 @@ article.issue h2{
 
 /* Sponsors page */
 
+div.issue-summary p{
+  margin: 0;
+}
 .sponsors-image {
     width: 100%;
     margin-bottom: 0px;
@@ -4652,7 +4655,7 @@ header p{
 
 .row.about-header{
     /*text-align: center;*/
-    margin: 20px 20px 20px 5px;
+    margin: 20px 0 20px 5px;
 }
 
 .row.about-header p{
