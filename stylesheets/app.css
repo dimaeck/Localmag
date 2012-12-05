@@ -4652,7 +4652,7 @@ header p{
 
 .row.about-header{
     /*text-align: center;*/
-    margin: 20px;
+    margin: 20px 20px 20px 5px;
 }
 
 .row.about-header p{
