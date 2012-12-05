@@ -4216,11 +4216,7 @@ ul.social-icon > li > a{
     font-family: "nimbus-sans", sans-serif;
 }
 
-.byline{
-    /*font-family: "nimbus-sans", sans-serif;*/
-    font-size: 20px;
-}
-.post_content p{
+.post_content p, .byline{
     font-family: "arno-pro", serif;
     font-size: 16px;
     margin-left: 0;
