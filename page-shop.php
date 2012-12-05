@@ -11,7 +11,7 @@
                             <div class="seven columns">
                                 <p class="byline"> <span class="bold">Our quarterly print edition chronicles one town per issue with over 90 pages of features, infographics and photo spreads.</span></p>
                             </div>
-                            <div class="offset-by-one one-and-half columns mobile-hide">
+                            <!-- <div class="offset-by-one one-and-half columns mobile-hide">
                                 <a href="<?php echo site_url('/shop');?>" >
                                     <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/cover_issue1.jpg" alt="magazine stack"/>
                                 </a>
@@ -19,7 +19,7 @@
                             <div class="two columns end mini-text-wrapper">
                                 <h5> <strong> Issue No. 1 </strong> </h5>
                                 <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
