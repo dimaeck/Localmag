@@ -19,7 +19,13 @@
             </li>
             <li>
                 <a href="javascript:window.print();" target="_blank">
-                    <i class="foundicon-youtube social-icon"></i>
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/icons/noun_project_1313_paper.svg" style="width: 29px; height: 29px;" /> -->
+                    <svg style="margin-top: 5px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="29px" height="29px" viewBox="-3.093 -7.272 82.069 100" enable-background="new -3.093 -7.272 82.069 100" xml:space="preserve">
+                        <path fill="#222" d="M52.008-7.272l26.969,27.63v72.37H-3.093v-100H52.008z M8.75,80.885h58.389V24.304H45.921V4.568H8.75V80.885z
+                             M16.809,42.231h41.776v-4.605H16.809V42.231z M16.809,55.392h41.776v-4.605H16.809V55.392z M16.809,68.548h41.776v-4.604H16.809
+                            V68.548z">
+                        </path>
+                    </svg>
                 </a>
             </li>
 
