@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="twelve columns panel homepage-summary">
                         <div class="row">
-                            <div class="seven columns">
+                            <div class="eight columns">
                                 <p class="byline"> <span class="bold">Our quarterly print edition chronicles one town per issue with over 90 pages of features, infographics and photo spreads.</span></p>
                             </div>
                             <!-- <div class="offset-by-one one-and-half columns mobile-hide">
