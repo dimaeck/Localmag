@@ -480,4 +480,8 @@ add_action('save_post', 'save_homepage_meta');
     }
     
     add_filter('request', 'myfeed_request');
+
+    function get_article_icon() {
+        echo '<img class="article-icon" src="<?php echo get_template_directory_uri(); ?>/images/article-icon.png" alt="article" />';
+    }
  ?>

@@ -11,7 +11,7 @@
                                         Local: A Quarterly of People and Places commits to penning the overlooked America, bringing you the neglected narrative of this country.
                                     </p>
                                     <?php
-                                        $page = get_page_by_title( 'About & Contact' );
+                                        $page = get_page_by_title( 'About/Contact Us' );
                                         $pageId = $page->ID;
                                     ?>
                                 </div>
@@ -25,7 +25,8 @@
                                 <div class="twelve columns" style="float: left; margin-top: 75px;">
 
                                     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">
-                                        <img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a>
+                                        <img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
+                                    </a>
                                         <br />
                                         This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>
                                 </div>
@@ -92,7 +93,7 @@
                 <?php wp_footer(); // js scripts are inserted using this function ?>
                 <script type="text/javascript">
                     var _gaq = _gaq || [];
-                    _gaq.push(['_setAccount', 'UA-32779107-1']);
+                    _gaq.push(['_setAccount', 'UA-36852527-1']); 
                     _gaq.push(['_setDomainName', 'localmag.us']);
                     _gaq.push(['_setAllowLinker', true]);
                     _gaq.push(['_trackPageview']);

@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="twelve columns panel single-issue-summary up50">
                                 <div class="row">
-                                    <div class="eight columns issue-summary">
+                                    <div class="twelve columns issue-summary">
                                         <p>
                                             <?php echo $post->post_content; ?>
                                         </p>                                           

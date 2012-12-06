@@ -4321,10 +4321,17 @@ div.homepage-summary, div.single-issue-summary{
 }
 .shop-issue-title{
     margin-top: 0;
+    font-family: "arno-pro", serif;
+    font-weight: 300;
+    font-size: 17px;
 }
 
 .shop-issue-header{
     margin: 0;
+    font-family: "nimbus-sans", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+
 }
 
 .shop-issue-header a{
@@ -4677,6 +4684,7 @@ header p{
     vertical-align: baseline;
     vertical-align: bottom;
     width: 100%;
+    /*margin-bottom: 10px;*/
 }
 
 .team-image:hover > .hover-over-article{
@@ -4684,6 +4692,9 @@ header p{
     opacity: 1;
 }
 
+.team-image .hover-over-article p {
+  font-size: 12px;
+}
 .sub-title{
   margin: 0;
   font-size: 10px;

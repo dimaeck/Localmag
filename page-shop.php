@@ -7,20 +7,29 @@
 <?php get_header(); ?>
                 <div class="row">
                     <div class="twelve columns panel homepage-summary">
-                        <div class="row">
+                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <div class="row shop-header">
+                                <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+                                    <header>
+                                            <!-- <h1 class="about-header"><?php the_title(); ?></h1> -->
+                                    </header>                                
+                                    <section class="post_content">
+                                            <br />
+                                            <?php the_content(); ?>
+                                            <br />
+                                    </section>
+                                </article>
+                                <!-- <div class="twelve columns"></div> -->
+                            </div>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
+
+
+                        <!-- <div class="row">
                             <div class="eight columns">
                                 <p class="byline"> <span class="bold">Our quarterly print edition chronicles one town per issue with over 90 pages of features, infographics and photo spreads.</span></p>
                             </div>
-                            <!-- <div class="offset-by-one one-and-half columns mobile-hide">
-                                <a href="<?php echo site_url('/shop');?>" >
-                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/cover_issue1.jpg" alt="magazine stack"/>
-                                </a>
-                            </div>
-                            <div class="two columns end mini-text-wrapper">
-                                <h5> <strong> Issue No. 1 </strong> </h5>
-                                <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
-                            </div> -->
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -40,7 +49,7 @@
                                 <div class="row">
                                     <div class="twelve columns">
                                         <div class="row">
-                                            <div class="ten columns centered">
+                                            <div class="ten columns">
                                                     <div class="featured-image">
                                                         <a href="<?php the_permalink();?>" />
                                                             <img src="<?php echo get_template_directory_uri(); ?>/images/subscription_photo.jpg" style="height:300px;" alt="magazine stack"/>

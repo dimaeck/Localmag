@@ -42,11 +42,14 @@
                             .css('position', '')
                             .css('top', '')
                             .css('left', '')
-                            .css('width', '')
+                            // .css('width', '1000')
                             .removeClass(s.className);
 
                         s.stickyElement.parent().removeClass(s.className);
+                        // s.stickyElement.parent().css('width', '1000px');
                         
+                        s.stickyElement.animate({ width:1000 }, 100);
+
                         s.currentTop = null;
                         $(".homepage-summary about-header").css('margin-top', '');
                     }

@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="twelve columns">
-                                                <hr />
+                                                <hr class="thinner"/>
                                                 <p>
                                                     <?php
                                                         $user = get_user_by('login', 'dan webster');
@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="twelve columns">
-                                                <hr />
+                                                <hr class="thinner"/>
                                                 <p>
                                                     <?php
                                                         $user = get_user_by('login', 'diana@localmag.org');
@@ -133,10 +133,10 @@
                                         </div>
                                         <div class="row">
                                             <div class="twelve columns">
-                                                <hr />
+                                                <hr class="thinner"/>
                                                 <p>
                                                     <?php
-                                                        $user = get_user_by('login', 'amanda@localmag.org');
+                                                        $user = get_user_by('login', 'amanda hakanson-stacy');
                                                         $user_data = get_userdata($user->ID);
                                                         echo $user_data->user_description;
                                                     ?>
@@ -159,12 +159,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="twelve columns">
-                                                <hr />
+                                                <hr class="thinner"/>
                                                 <p>
                                                     <?php
-                                                        // $user = get_user_by('login', 'allison@localmag.org');
-                                                        // $user_data = get_userdata($user->ID);
-                                                        // echo $user_data->user_description;
+                                                        $user = get_user_by('login', 'allison davis');
+                                                        $user_data = get_userdata($user->ID);
+                                                        echo $user_data->user_description;
                                                     ?>
                                                 </p>
                                             </div>
@@ -186,12 +186,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="twelve columns">
-                                                <hr />
+                                                <hr class="thinner"/>
                                                 <p>
                                                     <?php
-                                                        // $user = get_user_by('login', 'samantha@localmag.org');
-                                                        // $user_data = get_userdata($user->ID);
-                                                        // echo $user_data->user_description;
+                                                        $user = get_user_by('login', 'sam moore');
+                                                        $user_data = get_userdata($user->ID);
+                                                        echo $user_data->user_description;
                                                     ?>
                                                 </p>
                                             </div>
