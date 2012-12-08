@@ -472,16 +472,44 @@ add_action('save_post', 'save_homepage_meta');
         return $original_template;
     }
     add_action('single_template', 'get_issue_subpages_template', 1);
-    
-    function myfeed_request($qv) {
-        if (isset($qv['feed']))
-            $qv['post_type'] = 'issue';
-        return $qv;
-    }
-    
-    add_filter('request', 'myfeed_request');
 
     function get_article_icon() {
         echo '<img class="article-icon" src="<?php echo get_template_directory_uri(); ?>/images/article-icon.png" alt="article" />';
     }
+    
+    /**
+     * RSS FEED CUSTOMIZATIONS
+     * http://icodesnippet.com/search/pre_get_posts/
+     */
+
+    /** Adding in custom post type 'issue' (articles are children of this) **/
+    // function myfeed_request($qv) {
+    //     if (isset($qv['feed']))
+    //         $qv['post_type'] = 'issue';
+    //     return $qv;
+    // }
+    // add_filter('request', 'myfeed_request');
+
+    function rss_add_cpt($query){
+        if ($query->is_feed){
+            $query->set('post_type', 'issue');
+            return $query;
+        }
+        return $query;
+    }
+    add_filter('pre_get_posts', 'rss_add_cpt');
+
+    function rss_published_only($query) {
+        if ($query->is_feed) {
+            $query->set('post_status','publish');
+        }
+        return $query;
+        }
+    add_filter('pre_get_posts','rss_published_only');
+
+    // function add_yahoo_media_xml() {
+    //     echo 'xmlns:media="http://search.yahoo.com/mrss/"';
+    // }
+    // add_action('do_feed_rss2', 'add_yahoo_media_xml');
+
  ?>

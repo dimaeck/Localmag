@@ -62,7 +62,7 @@
                                 if ($loop->have_posts()){
                                     while ($loop->have_posts()){
                                         $loop->the_post();
-                                        
+                                        // if( the_post_thumbnail( 'wpf-featured') ){
                              ?>
                             <li>
                                 <div class="row">
@@ -102,7 +102,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <?php 
+                            <?php   
+                                    // }
                                     } //Endwhile
                                 } //EndIf
                             ?>
