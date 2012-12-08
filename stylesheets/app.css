@@ -4287,6 +4287,11 @@ div.homepage-summary, div.single-issue-summary{
   border-right: none;
 }
 
+#menu-main-nav .nav-blog-title h5 {
+  margin: 0;
+  padding: 0 20px 0 20px;
+}
+
 #menu-main-nav .nav-blog-title h5 a{
   color: #fff;
   font-family: "arno-pro", serif;
@@ -4745,10 +4750,20 @@ a.mini-text{
       background-color: rgba(0, 0, 0, 0.9);
       height: auto;
     }
+
+    #menu-main-nav .nav-blog-title h5{
+      margin: 0; 
+      padding: 0;
+    }
     #menu-main-nav > li{
       margin: 5px 0 5px 0;
       text-align: center;
     }
+
+    .nav-bar > li > a:first-child{
+      padding: 0px;
+    }
+
     /* for the footer */
     #footer-content .offset-by-half{
         margin-left: 0;

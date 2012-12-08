@@ -123,7 +123,7 @@ add_action('wp_enqueue_scripts', 'wp_foundation_js');
 function localmag_main_nav() {
     echo '<ul id="menu-main-nav" class="nav-wrapper nav-styles top-nav nav-bar block-grid six-up mobile-two-up">';
     echo    '<li class="nav-blog-title">';
-    echo        '<h5 style="margin: 0; padding: 0 20px 0 20px;"><a href="' . get_bloginfo('url') . '"> Local Magazine </a></h5>';
+    echo        '<h5><a href="' . get_bloginfo('url') . '"> Local Magazine </a></h5>';
     echo    '</li>';
             wp_nav_menu(
                 array( 
