@@ -4743,6 +4743,7 @@ a.mini-text{
       margin-top: -2px;
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.9);
+      height: auto;
     }
     #menu-main-nav > li{
       margin: 5px 0 5px 0;
