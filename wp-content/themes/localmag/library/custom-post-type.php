@@ -35,7 +35,7 @@ function issue_post_type() {
 	 	) /* end of options */
 	); /* end of register post type */
 	
-    flush_rewrite_rules();	
+    flush_rewrite_rules();
 } 
 // adding the function to the Wordpress init
 add_action( 'init', 'issue_post_type');
