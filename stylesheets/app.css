@@ -4482,6 +4482,10 @@ article.issue h2{
 }
 
 
+.post_content p a:hover{
+  color: #000;
+  text-decoration: underline;
+}
 /***** FOOOTER *****/
 
 .navigation a:hover{

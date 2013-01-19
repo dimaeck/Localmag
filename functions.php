@@ -507,9 +507,16 @@ add_action('save_post', 'save_homepage_meta');
         }
     add_filter('pre_get_posts','rss_published_only');
 
-    // function add_yahoo_media_xml() {
-    //     echo 'xmlns:media="http://search.yahoo.com/mrss/"';
-    // }
-    // add_action('do_feed_rss2', 'add_yahoo_media_xml');
+    function rss_add_featured_image( $content ){
+        if(get_the_post_thumbnail()){
+            $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'wpf-featured');
+            $image_html = '<img src="' . $image[0]. '" width="' . $image[1] . '" height="' . $image[2] . '">';
+            $content = $image_html . $content;
+            return $content;
+        } else {
+            return $content;
+        }
+    }
+    add_filter('the_content_feed', 'rss_add_featured_image');
 
  ?>
