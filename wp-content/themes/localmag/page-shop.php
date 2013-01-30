@@ -5,6 +5,10 @@
  */
 ?>
 <?php get_header(); ?>
+<div class="row">
+    <div class="twelve columns">
+        <div class="row">
+            <div class="twelve columns">
                 <div class="row">
                     <div class="twelve columns panel homepage-summary">
                         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

@@ -51,7 +51,3 @@
       </a>
       <?php localmag_main_nav(); // Adjust using Menus in Wordpress Admin ?>
     </div>
-    <div class="row">
-      <div class="twelve columns">
-        <div class="row">
-          <div class="twelve columns">

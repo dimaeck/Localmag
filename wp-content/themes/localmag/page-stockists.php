@@ -5,13 +5,35 @@ Template Name: Right Sidebar Page
 ?>
 
 <?php get_header(); ?>
-			
-			<div id="content" class="clearfix">
-            
-
-			
-				<div id="main" class="eight columns clearfix" role="main">
-
+<div class="row">
+    <div class="twelve columns">
+        <div class="row">
+            <div class="twelve columns">
+				<div class="row">
+                    <div class="twelve columns clearfix">
+                        <div class="row">
+                            <div class="twelve columns panel single-issue-summary up50">
+                                <div class="row container">
+                                    <div class="twelve columns issue-summary">
+                                        <p>
+                                            <?php echo get_post_meta($post->ID, 'custom_tagline', true); ?>
+                                        </p>                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+	<div id="content" class="row container clearfix">
+		<div id="main" class="nine columns clearfix" role="main">
+			<div class="row">
+				<div class="twelve columns">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
@@ -38,11 +60,14 @@ Template Name: Right Sidebar Page
 					<?php else : ?>
 			
 					<?php endif; ?>
-			
-				</div> <!-- end #main -->
+				</div>
+			</div>
+		</div> <!-- end #main -->
+	<br />
+	<?php get_sidebar(); // sidebar 1 ?>
 
-        	<?php get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+	</div> <!-- end #content -->
+</div>
+</div>
 
 <?php get_footer(); ?>
