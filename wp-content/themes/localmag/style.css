@@ -146,12 +146,6 @@ div[id*='attachment_']{
 	height: 100%;
 }
 
-#credit320{
-	background: url('images/320press_mini.png') no-repeat left top transparent;
-	padding-left: 20px;
-	display: inline !important;
-}
-
 #main article img{
 	max-width: 100%;
 /*CUSTOM removal for localmag*/

@@ -4189,23 +4189,7 @@ ul.social-icon > li > a{
   font-size: 25px;
 }
 
-/*.social-icon{
-  font-size: 25px;
-}*/
-
 /************ Header.php Styles *************/
-
-.siteinfo{
-   position: absolute;
-   color: #fff;
-   border: solid 5px #fff;
-   top: 0;
-   width: 60%;
-   height: 60%;
-   margin-left: 20%;
-   margin-top: 10%;
-   padding: 5% 10% 5% 10%; 
-}
 
 .header-fill{
   background-color: #F2F2F2;
@@ -4266,6 +4250,7 @@ div.homepage-summary, div.single-issue-summary{
 /********** Header styles **************/
 
 #menu-main-nav{
+    position: relative;
     background-color: #000;
     background-color: rgba(0,0,0,0.8);
     height: 50px;

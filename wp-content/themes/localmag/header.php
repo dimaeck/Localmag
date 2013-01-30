@@ -43,25 +43,15 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>    
     <div class="row full-width-header-here header-fill hide-on-print">
-        <div class="twelve columns">
-            <div class="row container">
-                <div class="twelve columns">
-                    <div class="row">
-                        <div class="twelve columns">
-                            <div class="row">
-                                    <?php
-                                        $image_num = rand(1,6);
-                                    ?>
-                                    <a href="<?php echo site_url();?>">
-                                       <img src="<?php echo (get_template_directory_uri() . "/header-images/0$image_num.png") ; ?>" class="full-width-image" alt="Localmag"/>
-                                    </a>
-                            </div>
-                            <div class="row normal-header-here">
-                                <div class="row">
-                                    <div class="twelve columns">
-                                                <?php localmag_main_nav(); // Adjust using Menus in Wordpress Admin ?>                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <?php
+        $image_num = rand(1,4);
+      ?>
+      <a href="<?php echo site_url();?>">
+         <img src="<?php echo (get_template_directory_uri() . "/header-images/skinny/0$image_num.png") ; ?>" class="full-width-image" alt="Localmag"/>
+      </a>
+      <?php localmag_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+          <div class="row container">
+              <div class="twelve columns">
