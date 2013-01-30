@@ -5,7 +5,7 @@
 
 ?>
 <?php get_header(); ?>
-                <div class="row">
+                <div class="row container">
                     <div class="twelve columns panel homepage-summary">
                         <div class="row">
                             <div class="seven columns">

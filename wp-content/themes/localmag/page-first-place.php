@@ -7,7 +7,7 @@
 <?php get_header(); ?>
                 <div class="row">
                     <div class="twelve columns panel homepage-summary">
-                        <div class="row">
+                        <div class="row container">
                             <div class="seven columns mobile-four">
                                 <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> tracks down overlooked communities and chronicles the neglected American narrative. </p>
                             </div>

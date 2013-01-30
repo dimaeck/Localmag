@@ -5,22 +5,27 @@
  */
 ?>
 <?php get_header(); ?>
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="row about-header">
-                    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-                        <header>
-                                <!-- <h1 class="about-header"><?php the_title(); ?></h1> -->
-                        </header>                                
-                        <section class="post_content">
-                                <br />
-                                <?php the_content(); ?>
-                                <br />
-                        </section>
-                    </article>
-                    <!-- <div class="twelve columns"></div> -->
+                <div class="row">
+                    <div class="twelve columns panel">
+                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <div class="row container about-header">
+                                <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+                                    <header>
+                                            <!-- <h1 class="about-header"><?php the_title(); ?></h1> -->
+                                    </header>                                
+                                    <section class="post_content">
+                                            <br />
+                                            <?php the_content(); ?>
+                                            <br />
+                                    </section>
+                                </article>
+                                <!-- <div class="twelve columns"></div> -->
+                            </div>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
+            
             </div>
         </div>
     </div>

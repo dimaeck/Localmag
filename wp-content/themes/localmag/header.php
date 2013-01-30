@@ -53,5 +53,5 @@
     </div>
     <div class="row">
       <div class="twelve columns">
-          <div class="row container">
-              <div class="twelve columns">
+        <div class="row">
+          <div class="twelve columns">

@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="twelve columns panel homepage-summary">
                         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                            <div class="row shop-header">
+                            <div class="row container shop-header">
                                 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
                                     <header>
                                             <!-- <h1 class="about-header"><?php the_title(); ?></h1> -->
