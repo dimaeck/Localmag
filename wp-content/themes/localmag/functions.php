@@ -121,7 +121,7 @@ add_action('wp_enqueue_scripts', 'wp_foundation_js');
 //add_action('wp_enqueue_scripts', 'typekit_js');
 
 function localmag_main_nav() {
-    echo '<ul id="menu-main-nav" class="nav-wrapper nav-styles top-nav nav-bar block-grid six-up mobile-two-up">';
+    echo '<ul id="menu-main-nav" class="nav-wrapper nav-styles top-nav nav-bar block-grid six-up mobile-one-up">';
     echo    '<li class="nav-blog-title">';
     echo        '<h5><a href="' . get_bloginfo('url') . '"> Local Magazine </a></h5>';
     echo    '</li>';
@@ -432,7 +432,8 @@ add_action('save_post', 'save_homepage_meta');
         global $post;
         $img_description = get_post_meta( $post->ID, 'featured_description', true );
 
-        if ( isset( $img_description ) && $img_description !== '' ){
+        if ( isset( $img_description ) && trim($img_description) !== '' ){
+            
             return $img_description;
         }else {
             return the_title();
@@ -492,7 +493,7 @@ add_action('save_post', 'save_homepage_meta');
 
     function rss_add_cpt($query){
         if ($query->is_feed){
-            $query->set('post_type', 'issue');
+            $query->set('post_type', 'story');
             return $query;
         }
         return $query;
@@ -507,16 +508,44 @@ add_action('save_post', 'save_homepage_meta');
         }
     add_filter('pre_get_posts','rss_published_only');
 
-    function rss_add_featured_image( $content ){
-        if(get_the_post_thumbnail()){
-            $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'wpf-featured');
-            $image_html = '<img src="' . $image[0]. '" width="' . $image[1] . '" height="' . $image[2] . '">';
-            $content = $image_html . $content;
-            return $content;
-        } else {
-            return $content;
-        }
-    }
-    add_filter('the_content_feed', 'rss_add_featured_image');
+    // function rss_add_featured_image( $content ){
+    //     if(get_the_post_thumbnail()){
+    //         $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'wpf-featured');
+    //         $image_html = '<img src="' . $image[0]. '" width="' . $image[1] . '" height="' . $image[2] . '">';
+    //         $content = $image_html . $content;
+    //         return $content;
+    //     } else {
+    //         return $content;
+    //     }
+    // }
+    // add_filter('the_content_feed', 'rss_add_featured_image');
 
+    remove_all_actions( 'do_feed_rss2' );
+    add_action( 'do_feed_rss2', 'localmag_stories_feed_rss2', 10, 1 );
+
+    function localmag_stories_feed_rss2( $for_comments ) {
+        global $wp_query;
+        $rss_template = get_template_directory() . '/feeds/feed-flipboard-stories-rss2.php';
+        
+        if( get_query_var( 'taxonomy' ) == 'issue' and get_query_var( 'post_type' ) == 'story' ){
+            add_action('pre_get_posts', 'localmag_stories_flipboard_feed');
+        }
+
+        if( get_query_var( 'post_type' ) == 'story' and file_exists( $rss_template ) ){
+            load_template( $rss_template );
+        }
+        else
+            do_feed_rss2( $for_comments ); // Call default function
+
+    }
+
+    function localmag_stories_flipboard_feed( $query ){
+        $taxquery = array( array( 'taxonomy' => 'issue', 'field' => 'slug') );
+        $query->set('tax_query', $taxquery);
+        // $query['tax_query'] = $taxquery;
+        error_log( print_r($query, TRUE));
+        return $query;
+    }
+
+   // add_action('pre_get_posts', 'localmag_stories_flipboard_feed')
  ?>

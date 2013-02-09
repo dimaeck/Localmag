@@ -4519,6 +4519,10 @@ article.issue h2{
     color: #666;
 }
 
+.creative-commons{
+  margin-top: 25px;
+}
+
 .summary{ display: none;}
 /*
    #subscribe-form label{
@@ -4624,8 +4628,8 @@ div.issue-summary p{
 
 .article-image-link p, .article-image-link h5, .article-image-link h6 {
   margin-bottom: 0;
-  margin-left: 17px;
-  margin-right: 17px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .block-grid-size{
@@ -4798,5 +4802,13 @@ a.mini-text{
 
     .nav-bar li a{
         padding: 0 5px;
+    }
+
+    .post_content p, .byline{
+      margin-right: 0;
+    }
+
+    div.panel {
+      padding: 10px;
     }
 }

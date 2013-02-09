@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			
+			<h1> Archive.php </h1>
 			<div id="content" class="clearfix">
 			
 				<div id="main" class="eight columns clearfix" role="main">

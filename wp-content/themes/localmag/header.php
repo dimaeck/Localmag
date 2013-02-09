@@ -8,7 +8,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title><?php wp_title('', true, 'right'); ?></title>
+	<title><?php 
+				$title = wp_title('', false, 'right');
+				if( isset($title) && $title != '' )
+					echo $title;
+				else
+					echo "Localmag";
+			?>
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- icons & favicons -->
 	<!-- For everything else -->

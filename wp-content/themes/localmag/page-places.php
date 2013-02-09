@@ -5,24 +5,20 @@
 
 ?>
 <?php get_header(); ?>
-                <div class="row container">
-                    <div class="twelve columns panel homepage-summary">
-                        <div class="row">
-                            <div class="seven columns">
-                                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
-                            </div>
-                            <div class="offset-by-one one-and-half columns mobile-hide">
-                                <a href="<?php echo site_url('/shop');?>" >
-                                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/magazine-stack.png" />
-                                </a>
-                            </div>
-                            <div class="two columns end mini-text-wrapper">
-                                <h5> <strong> Issue No. 1 </strong> </h5>
-                                <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="row container">
+    <div class="twelve columns panel homepage-summary">
+        <div class="row">
+            <div class="seven columns">
+                <p class="byline"> <span class="bold-italic">Local: A Quarterly of People and Places </span> <br /> commits to penning the overlooked America, bringing you the neglected narrative of this country. </p>
+            </div>
+            <div class="offset-by-one one-and-half columns mobile-hide">
+                <a href="<?php echo site_url('/shop');?>" >
+                    <img class="magazine-stack" src="<?php echo get_template_directory_uri() ?>/images/magazine-stack.png" />
+                </a>
+            </div>
+            <div class="two columns end mini-text-wrapper">
+                <h5> <strong> Issue No. 1 </strong> </h5>
+                <span class="mini-text"> <i>Jersey Shore, PA</i> </span>
             </div>
         </div>
     </div>

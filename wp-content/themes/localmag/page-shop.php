@@ -76,7 +76,9 @@
                                 </div>
                             </li>
                             <?php 
-                                $args = array('post_type' => 'issue', 'post_parent' => 0, 'post_per_page' => 10);
+                                $args = array('post_type' => 'story', 
+                                                'meta_query' => array( array( 'key' => 'is_issue', 'value' => 'true', 'compare' => '=', 'type' => 'CHAR')),
+                                                'post_per_page' => 10);
                                 $loop = new WP_Query( $args );
                                 $counter = 0;
                                 if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); 
@@ -88,7 +90,7 @@
                                                 <?php                                                         
                                                     if( class_exists( 'kdMultipleFeaturedImages' ) ) {
                                                         $attr = array('class' => 'shadow shop-image');
-                                                        kd_mfi_the_featured_image( 'issue-cover', 'issue', 'localmag-issue', NULL, $attr );
+                                                        kd_mfi_the_featured_image( 'issue-cover', 'story', 'localmag-issue', NULL, $attr );
                                                     }else{
                                                         the_post_thumbnail( 'wpf-featured' );
                                                     }
@@ -98,7 +100,7 @@
                                                 <h1>
                                                     <?php 
                                                         global $post;
-                                                        $issue_number = get_post_meta( $post->ID, 'issue_number', true );
+                                                        $issue_number = get_post_meta( $post->ID, 'shop_issue_number', true );
                                                         echo $issue_number;
                                                     ?> 
                                                 </h1>

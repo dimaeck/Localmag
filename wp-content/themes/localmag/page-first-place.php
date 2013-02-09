@@ -61,7 +61,15 @@
                     <div class="twelve columns">                                                
                         <ul class="adjustable-grid mobile block-grid two-up">
                             <?php 
-                                $args = array('post_type' => 'issue', 'post_parent' => 6, 'post_per_page' => 10);
+                                $args = array('post_type' => 'story', 
+                                              'tax_query'=> array( 
+                                                                    array(
+                                                                            'taxonomy' => 'locations',
+                                                                            'field' => 'slug',
+                                                                            'terms' => 'jersey-shore'
+                                                                        )
+                                                                )
+                                    , 'post_per_page' => 10);
                                 $loop = new WP_Query( $args );
                                 if ($loop->have_posts()){
                                     while ($loop->have_posts()){
@@ -91,7 +99,7 @@
                                                     <div class="row">
                                                         <div class="twelve columns">
                                                             <!-- <h6><time datetime="<?php echo the_time('Y-m-j'); ?>"><?php the_time('F jS, Y'); ?></time></h6> -->
-                                                            <h6> Issue <?php echo get_post_meta($post->post_parent, 'issue_number', true); ?> </h6>
+                                                            <!-- <h6> Issue <?php echo get_post_meta($post->post_parent, 'issue_number', true); ?> </h6> -->
                                                         </div>
                                                     </div>
                                                     <div class="row">
